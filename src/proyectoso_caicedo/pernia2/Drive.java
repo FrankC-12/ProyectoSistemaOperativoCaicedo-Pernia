@@ -21,13 +21,15 @@ public class Drive {
     int posicionArtista;
     int posicionLogica;
     int posicionDLC;
-    int posicionJuegos;
+    int posicionJuegosconDLC;
+    int posicionJuegossinDLC;
  
     char[] CarpetaNiveles;
     char[] CarpetaArtista;
     char[] CarpetaLogica;
     char[] CarpetaDLC;
-    char[] CarpetaJuegos;
+    char[] CarpetaJuegossinDLC;
+    char[] CarpetaJuegosconDLC;
     
 
     public Drive(String nombre) {
@@ -37,11 +39,15 @@ public class Drive {
         this.CarpetaArtista = new char[55];
         this.CarpetaLogica = new char[35];
         this.CarpetaDLC = new char[10]; 
-        this.CarpetaJuegos = new char[100];
+        this.CarpetaJuegossinDLC = new char[100];
+        this.CarpetaJuegosconDLC = new char[100];
         this.posicionNarrativa = 0;
         this.posicionNiveles = 0;
         this.posicionArtista = 0;
         this.posicionLogica = 0;
+        this.posicionJuegosconDLC = 0;
+        this.posicionJuegossinDLC = 0;
+        
 
 
     }
@@ -95,11 +101,20 @@ public class Drive {
         notifyAll();
     }
     
-    public synchronized void InsertarJuego(char g){
-        if (posicionJuegos==CarpetaJuegos.length-1){
+    public synchronized void InsertarJuegoconDLC(char g){
+        if (posicionJuegosconDLC==CarpetaJuegosconDLC.length-1){
         }else{
-        CarpetaJuegos[posicionJuegos] = g;
-        posicionJuegos++;
+        CarpetaJuegosconDLC[posicionJuegosconDLC] = g;
+        posicionJuegosconDLC++;
+        }
+        notifyAll();
+    }
+    
+    public synchronized void InsertarJuegosinDLC(char g){
+        if (posicionJuegossinDLC==CarpetaJuegossinDLC.length-1){
+        }else{
+        CarpetaJuegossinDLC[posicionJuegossinDLC] = g;
+        posicionJuegossinDLC++;
         }
         notifyAll();
     }
@@ -109,7 +124,7 @@ public class Drive {
                try {
                    wait();
                } catch (InterruptedException e) {
-                   System.out.println("Error: " + e);;
+                   System.out.println("Error: " + e);
                }
            }
         for (int i = 0; i < cantidad; i++) {
@@ -124,7 +139,7 @@ public class Drive {
                try {
                    wait();
                } catch (InterruptedException e) {
-                   System.out.println("Error: " + e);;
+                   System.out.println("Error: " + e);
                }
            }
         for (int i = 0; i < cantidad; i++) {
@@ -139,7 +154,7 @@ public class Drive {
                try {
                    wait();
                } catch (InterruptedException e) {
-                   System.out.println("Error: " + e);;
+                   System.out.println("Error: " + e);
                }
            }
         for (int i = 0; i < cantidad; i++) {
@@ -154,7 +169,7 @@ public class Drive {
                try {
                    wait();
                } catch (InterruptedException e) {
-                   System.out.println("Error: " + e);;
+                   System.out.println("Error: " + e);
                }
            }
        for (int i = 0; i < cantidad; i++) {
@@ -169,12 +184,42 @@ public class Drive {
                try {
                    wait();
                } catch (InterruptedException e) {
-                   System.out.println("Error: " + e);;
+                   System.out.println("Error: " + e);
                }
            }
     for (int i = 0; i < cantidad; i++) {
             CarpetaDLC[posicionDLC] = ' ';
             posicionDLC--;
+        } 
+    notifyAll();
+    }
+    
+    public synchronized void EliminarJuegosconDLC(){
+        while(posicionJuegosconDLC>0){
+               try {
+                   wait();
+               } catch (InterruptedException e) {
+                   System.out.println("Error: " + e);
+               }
+           }
+    for (int i = 0; i > 0; i++) {
+            CarpetaJuegosconDLC[posicionJuegosconDLC] = ' ';
+            posicionJuegosconDLC--;
+        } 
+    notifyAll();
+    }
+    
+    public synchronized void EliminarJuegossinDLC(){
+        while(posicionJuegossinDLC>0){
+               try {
+                   wait();
+               } catch (InterruptedException e) {
+                   System.out.println("Error: " + e);
+               }
+           }
+    for (int i = 0; i > 0; i++) {
+            CarpetaJuegossinDLC[posicionJuegossinDLC] = ' ';
+            posicionJuegossinDLC--;
         } 
     notifyAll();
     }

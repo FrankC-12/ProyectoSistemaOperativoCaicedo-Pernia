@@ -22,6 +22,7 @@ public class ProjectManager extends Observable implements Runnable {
     int DiasLanzamientoVariable;
     int VerStream;
     int CostoEmpleado;
+    String Estado;
     
 
     public ProjectManager(int Duraciondias, int DiasLanzamiento) {
@@ -33,6 +34,7 @@ public class ProjectManager extends Observable implements Runnable {
         this.horasdeldiasumador = 0;
         this.VerStream = 0;
         this.CostoEmpleado=0;
+        this.Estado = "";
     }
 
     @Override
@@ -40,14 +42,14 @@ public class ProjectManager extends Observable implements Runnable {
     while(true){
         CostoEmpleado += 20*24;
         while(horasdeldiasumador<horasdeldia16){
-            System.out.println("Paso");
             if(VerStream == 0){
             try {
+                Estado = "Tareas Administrativas";
                 Thread.sleep((long) MediaHora);
                 VerStream = 1;
                 horasdeldiasumador+=MediaHora;
                 this.setChanged();
-                this.notifyObservers("Tareas Administrativas");
+                this.notifyObservers(Estado);
                 this.clearChanged();
                 
             } catch (InterruptedException ex) {
@@ -57,6 +59,7 @@ public class ProjectManager extends Observable implements Runnable {
             else {
                 if(VerStream == 1){
             try {
+                Estado = "Ve Stream";
                 Thread.sleep((long) MediaHora);
                 VerStream = 0;
                 horasdeldiasumador+=MediaHora;
@@ -73,8 +76,9 @@ public class ProjectManager extends Observable implements Runnable {
             }
         
         horasdeldiasumador = 0;
+        Estado = "Cambiando Contador";
         this.setChanged();
-        this.notifyObservers("Cambiando Contador");
+        this.notifyObservers(Estado);
         this.clearChanged();
         this.setChanged();
         this.notifyObservers(Integer.toString(DiasLanzamientoVariable));
@@ -89,7 +93,6 @@ public class ProjectManager extends Observable implements Runnable {
         if (DiasLanzamientoVariable == 0){
         DiasLanzamientoVariable = DiasLanzamiento;
         }
-        
         }
         
         

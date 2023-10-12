@@ -7,6 +7,7 @@ package proyectoso_caicedo.pernia2;
 import java.util.Observable;
 import java.util.Observer;
 import java.util.concurrent.Semaphore;
+import static proyectoso_caicedo.pernia2.ProyectoSO_CaicedoPernia2.Empresa1;
 
 /**
  *
@@ -28,6 +29,7 @@ public class EmpresaCapcom {
     int PagosEmpleados;
     Tiempo t1;
     ProjectManager P1;
+    Director D1;
 
     public EmpresaCapcom(int DuracionDia,  int CantidadNarrativa, int CantidadNiveles, int CantidadArtista, int CantidadLogica, int CantidadDLC,  int cantidadIntegrador, int DiasLanzamiento) {
         this.DuracionDia = DuracionDia * 1000;
@@ -44,13 +46,14 @@ public class EmpresaCapcom {
     
     
     //Se inicializan los hilos en 0
-    public void InicializarHilos(){
+    public void InicializarHilos(Dashboard Interfaz){
         Semaphore Semaforo = new Semaphore(1); 
         Drive Carpetas = new Drive("Carpetas");
         for (int i = 0; i < Hilos.length; i++) {
             Hilos[i] = new Desarrollador(0,0,DuracionDia,Semaforo,Carpetas,0,1,2,6,5,1,400000,3,750000);
             Hilos[i].start();
         }
+        this.CrearDirector(Interfaz, Carpetas, Empresa1, null);
     }
       
     //Se clasifican los hilos segun su tipo
@@ -134,10 +137,17 @@ public class EmpresaCapcom {
      }
          
     public void CrearProjectManajer(Observer Interfaz){
-     P1 = new ProjectManager(DuracionDia,DiasLanzamiento);
-     P1.addObserver(Interfaz);
-     Thread HiloProjectManager = new Thread(P1);
-     HiloProjectManager.start();
+    P1 = new ProjectManager(DuracionDia,DiasLanzamiento);
+    P1.addObserver(Interfaz);
+    Thread HiloProjectManager = new Thread(P1);
+    HiloProjectManager.start();
+    }
+    
+    public void CrearDirector(Observer Interfaz, Drive Carpeta, EmpresaCapcom CAP,EmpresaBethesda BET){
+    D1 = new Director(DiasLanzamiento,DuracionDia,P1,Carpeta,CAP,BET); 
+    D1.addObserver(Interfaz);
+    Thread HiloDirector = new Thread(D1);
+    HiloDirector.start();
     }
      
      }

@@ -72,6 +72,18 @@ public class Dashboard extends javax.swing.JFrame implements Observer {
         jLabel4 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         ProximoCorte = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        Faltas = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        Descuento = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        Director = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        Costos = new javax.swing.JLabel();
+        GananciasTotales = new javax.swing.JLabel();
+        Utilidad = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -238,7 +250,7 @@ public class Dashboard extends javax.swing.JFrame implements Observer {
                                 .addComponent(jLabel10)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(EDispo, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel17)
@@ -360,6 +372,30 @@ public class Dashboard extends javax.swing.JFrame implements Observer {
 
         ProximoCorte.setText("---");
 
+        jLabel19.setText("Faltas:");
+
+        Faltas.setText("0");
+
+        jLabel20.setText("Descuento: ");
+
+        Descuento.setText("0");
+
+        jLabel21.setText("Director:");
+
+        Director.setText("---");
+
+        jLabel22.setText("Utilidad:");
+
+        jLabel23.setText("Costos Totales:");
+
+        jLabel24.setText("Ganancias Totales");
+
+        Costos.setText("0");
+
+        GananciasTotales.setText("0");
+
+        Utilidad.setText("0");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -368,27 +404,73 @@ public class Dashboard extends javax.swing.JFrame implements Observer {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel20)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Descuento, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(Faltas, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(ProximoCorte, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addComponent(ProjectManager, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(211, Short.MAX_VALUE))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(ProjectManager, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(Director, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(jLabel23)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(Costos, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(Utilidad, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(GananciasTotales, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                .addContainerGap(83, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(68, 68, 68)
+                .addGap(41, 41, 41)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel21)
+                    .addComponent(Director)
+                    .addComponent(jLabel22)
+                    .addComponent(Utilidad))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ProjectManager)
                     .addComponent(jLabel4))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(Faltas)
+                        .addComponent(jLabel24)
+                        .addComponent(GananciasTotales))
+                    .addComponent(jLabel19))
+                .addGap(11, 11, 11)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel20)
+                    .addComponent(Descuento))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel18)
-                    .addComponent(ProximoCorte))
-                .addContainerGap(247, Short.MAX_VALUE))
+                    .addComponent(ProximoCorte)
+                    .addComponent(jLabel23)
+                    .addComponent(Costos))
+                .addContainerGap(200, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Capcom", jPanel2);
@@ -397,7 +479,7 @@ public class Dashboard extends javax.swing.JFrame implements Observer {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 514, Short.MAX_VALUE)
+            .addGap(0, 536, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -503,12 +585,18 @@ public class Dashboard extends javax.swing.JFrame implements Observer {
     private javax.swing.JSpinner CantidadNarrativa1;
     private javax.swing.JSpinner CantidadNiveles;
     private javax.swing.JSpinner CantidadNiveles1;
+    private javax.swing.JLabel Costos;
+    private javax.swing.JLabel Descuento;
     private javax.swing.JLabel Dia;
+    private javax.swing.JLabel Director;
     private javax.swing.JSpinner DuracionDia;
     private javax.swing.JLabel EDispo;
     private javax.swing.JLabel EDispo1;
+    private javax.swing.JLabel Faltas;
+    private javax.swing.JLabel GananciasTotales;
     private javax.swing.JLabel ProjectManager;
     private javax.swing.JLabel ProximoCorte;
+    private javax.swing.JLabel Utilidad;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -520,7 +608,13 @@ public class Dashboard extends javax.swing.JFrame implements Observer {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -553,7 +647,36 @@ public class Dashboard extends javax.swing.JFrame implements Observer {
         }
         }
         catch(Exception d){
+            try {
+            Director c = (Director) o;
+            String arg1 = String.valueOf(arg);
+
+            if(c.faltas==Integer.parseInt(arg1)){
+            this.Faltas.setText(String.valueOf(arg));
+            }
+            else if(c.PMDescuento==Integer.parseInt(arg1)){
+            this.Descuento.setText(String.valueOf(arg));
+            }
+            else if(c.GananciasTotales==Integer.parseInt(arg1)){
+            this.GananciasTotales.setText(String.valueOf(arg));
+            }
+            else if(c.Costos==Integer.parseInt(arg1)){
+            this.Costos.setText(String.valueOf(arg));
+            }
+            else if(c.Utilidad==Integer.parseInt(arg1)){
+            this.Utilidad.setText(String.valueOf(arg));
+            }
+            else{
+            if(Integer.parseInt(arg1)==11111){
+            this.Director.setText(String.valueOf("Labores Administrativas"));
+            }
+            else{
+            this.Director.setText(String.valueOf("Enviar Videojuegos"));
+            }
+            }
+            }catch(Exception a){
             
+            }
         
         }
     }}
