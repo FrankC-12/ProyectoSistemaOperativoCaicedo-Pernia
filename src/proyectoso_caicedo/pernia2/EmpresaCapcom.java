@@ -18,6 +18,7 @@ public class EmpresaCapcom {
     Desarrollador[] Hilos;
     Thread HiloTiempo;
     int DuracionDia;
+    int DiasLanzamiento;
     int CantidadNiveles;
     int CantidadNarrativa;
     int CantidadLogica;
@@ -26,8 +27,9 @@ public class EmpresaCapcom {
     int CantidadIntegrador;
     int PagosEmpleados;
     Tiempo t1;
+    ProjectManager P1;
 
-    public EmpresaCapcom(int DuracionDia,  int CantidadNarrativa, int CantidadNiveles, int CantidadArtista, int CantidadLogica, int CantidadDLC,  int cantidadIntegrador) {
+    public EmpresaCapcom(int DuracionDia,  int CantidadNarrativa, int CantidadNiveles, int CantidadArtista, int CantidadLogica, int CantidadDLC,  int cantidadIntegrador, int DiasLanzamiento) {
         this.DuracionDia = DuracionDia * 1000;
         this.CantidadNarrativa = CantidadNarrativa;
         this.CantidadNiveles = CantidadNiveles;
@@ -37,6 +39,7 @@ public class EmpresaCapcom {
         this.CantidadIntegrador = cantidadIntegrador;
         this.Hilos = new Desarrollador[18];
         this.PagosEmpleados = 0;
+        this.DiasLanzamiento = DiasLanzamiento;
     }
     
     
@@ -128,11 +131,19 @@ public class EmpresaCapcom {
          for (int i = 0; i < Hilos.length; i++) {
             PagosEmpleados += Hilos[i].CostoporEmpleado;
         }
+     }
+         
+    public void CrearProjectManajer(Observer Interfaz){
+     P1 = new ProjectManager(DuracionDia,DiasLanzamiento);
+     P1.addObserver(Interfaz);
+     Thread HiloProjectManager = new Thread(P1);
+     HiloProjectManager.start();
+    }
      
      }
      
      
-    }
+    
         
 
         

@@ -15,10 +15,12 @@ import java.util.Observable;
  */
 public class Tiempo extends Observable implements Runnable{
     
+    String nombre;
     int duraciondias;
     int dias;
 
     public Tiempo(int duraciondias) {
+        this.nombre = "Tiempo";
         this.duraciondias = duraciondias;
         this.dias = 0;
     }

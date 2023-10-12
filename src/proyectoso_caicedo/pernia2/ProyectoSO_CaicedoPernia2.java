@@ -40,7 +40,7 @@ public class ProyectoSO_CaicedoPernia2 {
         if (archivoLecturaC.ready()){
         lector = new BufferedReader(archivoLecturaC);
         String cadena;
-        String[] Capcom = new String[7];
+        String[] Capcom = new String[8];
         int i = 0;
         while((cadena = lector.readLine())!=null){
         Capcom[i] = cadena;
@@ -48,7 +48,7 @@ public class ProyectoSO_CaicedoPernia2 {
         }
         
         //Se crea el objeto Empresa Capcom
-        Empresa1 = new EmpresaCapcom(Integer.parseInt(Capcom[0]),Integer.parseInt(Capcom[1]),Integer.parseInt(Capcom[2]),Integer.parseInt(Capcom[3]),Integer.parseInt(Capcom[4]),Integer.parseInt(Capcom[5]),Integer.parseInt(Capcom[6]));
+        Empresa1 = new EmpresaCapcom(Integer.parseInt(Capcom[0]),Integer.parseInt(Capcom[1]),Integer.parseInt(Capcom[2]),Integer.parseInt(Capcom[3]),Integer.parseInt(Capcom[4]),Integer.parseInt(Capcom[5]),Integer.parseInt(Capcom[6]),Integer.parseInt(Capcom[7]));
         Empresa1.InicializarHilos();
         Empresa1.ReasignarCantidades();
         
@@ -74,6 +74,9 @@ public class ProyectoSO_CaicedoPernia2 {
         }
         }
         Empresa1.CrearHiloTiempo(Interfaz);
+        
+        Empresa1.CrearProjectManajer(Interfaz);
+        
         
     }
     }

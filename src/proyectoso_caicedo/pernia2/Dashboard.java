@@ -68,6 +68,10 @@ public class Dashboard extends javax.swing.JFrame implements Observer {
         jLabel3 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
+        ProjectManager = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        ProximoCorte = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -348,15 +352,43 @@ public class Dashboard extends javax.swing.JFrame implements Observer {
 
         jTabbedPane1.addTab("Dashboard", jPanel1);
 
+        ProjectManager.setText("---");
+
+        jLabel4.setText("PM:");
+
+        jLabel18.setText("Proximo Corte:");
+
+        ProximoCorte.setText("---");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 514, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(ProximoCorte, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(ProjectManager, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(211, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 363, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(68, 68, 68)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ProjectManager)
+                    .addComponent(jLabel4))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel18)
+                    .addComponent(ProximoCorte))
+                .addContainerGap(247, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Capcom", jPanel2);
@@ -475,6 +507,8 @@ public class Dashboard extends javax.swing.JFrame implements Observer {
     private javax.swing.JSpinner DuracionDia;
     private javax.swing.JLabel EDispo;
     private javax.swing.JLabel EDispo1;
+    private javax.swing.JLabel ProjectManager;
+    private javax.swing.JLabel ProximoCorte;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -485,8 +519,10 @@ public class Dashboard extends javax.swing.JFrame implements Observer {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -500,13 +536,26 @@ public class Dashboard extends javax.swing.JFrame implements Observer {
 
     @Override
     public void update(Observable o, Object arg) {
-       
-        System.out.println("Paso");
+        try{
+        Tiempo c = (Tiempo) o;
         String Cantidaddias;
         Cantidaddias =  String.valueOf(arg);
         this.Dia.setText(Cantidaddias);
-        
-    
-    
     }
+    catch (Exception e){
+        try {
+        ProjectManager c = (ProjectManager) o;
+        if(String.valueOf(arg)=="Cambiando Contador" || String.valueOf(arg)=="Ve Stream" || String.valueOf(arg)=="Tareas Administrativas"){
+        this.ProjectManager.setText(String.valueOf(arg));
+        }
+        else{
+        this.ProximoCorte.setText(String.valueOf(arg));
+        }
+        }
+        catch(Exception d){
+            
+        
+        }
+    }}
+   
 }
