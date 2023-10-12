@@ -14,7 +14,7 @@ import java.util.logging.Logger;
  */
 public class ProjectManager extends Observable implements Runnable {
     
-    int Duraciondias;
+    float Duraciondias;
     float MediaHora;
     float horasdeldia16;
     float horasdeldiasumador;
@@ -36,10 +36,92 @@ public class ProjectManager extends Observable implements Runnable {
         this.CostoEmpleado=0;
         this.Estado = "";
     }
-
+    
+    public void ModificarDuracionyLanzamiento(int duracionnueva, int lanzamientonuevo){
+        Duraciondias = duracionnueva;
+        DiasLanzamientoVariable = lanzamientonuevo;
+        DiasLanzamiento = lanzamientonuevo;
+        horasdeldia16 = (16*duracionnueva)/24;
+        MediaHora = (float) ((0.5*horasdeldia16)/16);
+    }
     @Override
     public void run() {
     while(true){
+        if (DiasLanzamientoVariable == 0){
+            
+            
+            
+            CostoEmpleado += 20*24;
+        while(horasdeldiasumador<horasdeldia16){
+            if(VerStream == 0){
+            try {
+                Estado = " ";
+                Thread.sleep((long) MediaHora);
+                VerStream = 1;
+                horasdeldiasumador+=MediaHora;
+                
+                this.setChanged();
+                this.notifyObservers("Tareas Administrativas");
+                this.clearChanged();
+                
+                
+                
+            } catch (InterruptedException ex) {
+                Logger.getLogger(ProjectManager.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            }
+            else {
+                if(VerStream == 1){
+            try {
+                Estado = " ";
+                Thread.sleep((long) MediaHora);
+                VerStream = 0;
+                horasdeldiasumador+=MediaHora;
+                this.setChanged();
+                this.notifyObservers("Ve Stream");
+                this.clearChanged();
+                
+            } catch (InterruptedException ex) {
+                Logger.getLogger(ProjectManager.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            }
+                
+            }
+            }
+        
+        horasdeldiasumador = 0;
+        Estado = "Cambiando Contador";
+        this.setChanged();
+        this.notifyObservers(Integer.toString(DiasLanzamientoVariable));
+        this.clearChanged();
+        this.setChanged();
+        this.notifyObservers(Estado);
+        this.clearChanged();
+        this.setChanged();
+        this.notifyObservers("Enviar Videojuegos");
+        this.clearChanged();
+            
+        
+        
+        
+        try {
+            Thread.sleep((long) (8*Duraciondias/24));
+        } catch (InterruptedException ex) {
+            Logger.getLogger(ProjectManager.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        DiasLanzamientoVariable--;
+        if (DiasLanzamientoVariable < 0){
+        DiasLanzamientoVariable = DiasLanzamiento;
+       
+        }
+            
+        
+        
+        } else{
+        
+        
+        
         CostoEmpleado += 20*24;
         while(horasdeldiasumador<horasdeldia16){
             if(VerStream == 0){
@@ -48,9 +130,12 @@ public class ProjectManager extends Observable implements Runnable {
                 Thread.sleep((long) MediaHora);
                 VerStream = 1;
                 horasdeldiasumador+=MediaHora;
+                
                 this.setChanged();
                 this.notifyObservers(Estado);
                 this.clearChanged();
+                
+                
                 
             } catch (InterruptedException ex) {
                 Logger.getLogger(ProjectManager.class.getName()).log(Level.SEVERE, null, ex);
@@ -83,19 +168,24 @@ public class ProjectManager extends Observable implements Runnable {
         this.setChanged();
         this.notifyObservers(Integer.toString(DiasLanzamientoVariable));
         this.clearChanged();
+        this.setChanged();
+                this.notifyObservers("Labores Administrativas");
+                this.clearChanged();
         try {
-            Thread.sleep(8*Duraciondias/24);
+            Thread.sleep((long) (8*Duraciondias/24));
         } catch (InterruptedException ex) {
             Logger.getLogger(ProjectManager.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         DiasLanzamientoVariable--;
-        if (DiasLanzamientoVariable == 0){
+        
+        if (DiasLanzamientoVariable < 0){
         DiasLanzamientoVariable = DiasLanzamiento;
+        
         }
         }
         
-        
+    }
        
     }
     }

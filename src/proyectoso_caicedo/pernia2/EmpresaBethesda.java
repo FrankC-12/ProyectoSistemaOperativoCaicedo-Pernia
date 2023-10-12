@@ -37,9 +37,9 @@ public class EmpresaBethesda {
     
     public void InicializarHilos(){
         Semaphore Semaforo = new Semaphore(1); 
-        Drive Carpetas = new Drive("Carpetas");
+        Drive Carpetas = new Drive("Carpetas", null, this);
         for (int i = 0; i < Hilos.length; i++) {
-            Hilos[i] = new Desarrollador(0,0,DuracionDia,Semaforo,Carpetas,0,2,3,4,6,5,450000,6,900000);
+           Hilos[i] = new Desarrollador(0,0,DuracionDia,Semaforo,Carpetas,0,2,3,4,6,5,450000,6,900000);
             Hilos[i].start();
         }
     

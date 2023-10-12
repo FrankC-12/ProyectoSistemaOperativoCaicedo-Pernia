@@ -30,6 +30,7 @@ public class EmpresaCapcom {
     Tiempo t1;
     ProjectManager P1;
     Director D1;
+    
 
     public EmpresaCapcom(int DuracionDia,  int CantidadNarrativa, int CantidadNiveles, int CantidadArtista, int CantidadLogica, int CantidadDLC,  int cantidadIntegrador, int DiasLanzamiento) {
         this.DuracionDia = DuracionDia * 1000;
@@ -48,7 +49,9 @@ public class EmpresaCapcom {
     //Se inicializan los hilos en 0
     public void InicializarHilos(Dashboard Interfaz){
         Semaphore Semaforo = new Semaphore(1); 
-        Drive Carpetas = new Drive("Carpetas");
+        Drive Carpetas = new Drive("Carpetas", this, null);
+        Carpetas.InicializarcantidadjuegosinDLCVar(3);
+        Carpetas.addObserver(Interfaz);
         for (int i = 0; i < Hilos.length; i++) {
             Hilos[i] = new Desarrollador(0,0,DuracionDia,Semaforo,Carpetas,0,1,2,6,5,1,400000,3,750000);
             Hilos[i].start();

@@ -30,6 +30,7 @@ public class Desarrollador extends Thread{
     int GananciaJuego;
     int cantidadDeJuegossinDLC;
     int GananciaJuegoDLC;
+    int cantidadDeJuegossinDLCvariable;
 
     public Desarrollador(int DiasporProducto, int ProductoporDia, int DuracionDia, Semaphore Semaforo, Drive Carpeta, int tipo, int cantidadGuiones, int cantidadNiveles, int cantidadGraficos, int cantidadSistemas, int cantidadDLC, int GananciaJuego, int cantidadDeJuegossinDLC, int GananciaJuegoDLC) {
         this.DiasporProducto = DiasporProducto;
@@ -45,6 +46,7 @@ public class Desarrollador extends Thread{
         this.cantidadDLC = cantidadDLC;
         this.GananciaJuego = GananciaJuego;
         this.cantidadDeJuegossinDLC = cantidadDeJuegossinDLC;
+        this.cantidadDeJuegossinDLCvariable = cantidadDeJuegossinDLC;
         this.GananciaJuegoDLC = GananciaJuegoDLC;
         this.CostoporEmpleado = 0;
         this.GananciaIntegradores = 0;
@@ -108,32 +110,49 @@ public class Desarrollador extends Thread{
         Semaforo.release();
     
     }
+    
+   
     else if(tipo == 6){
-        
-        int cantidadDeJuegossinDLCvariable = cantidadDeJuegossinDLC;
         sleep(DuracionDia*2);
-        CostoporEmpleado+= 25*24;
-        if (cantidadDeJuegossinDLCvariable==0){
+        CostoporEmpleado+= 25*24*2;
         Semaforo.acquire();
+        if (Carpeta.cantidadjuegosinDLCVar==0){
+        
+        if(Carpeta.ComprobarCantidadesconDLC(cantidadGuiones, cantidadNiveles, cantidadGraficos, cantidadSistemas,cantidadDLC)){
         Carpeta.EliminarNarrativa(cantidadGuiones);
         Carpeta.EliminarNiveles(cantidadNiveles);
         Carpeta.EliminarArtista(cantidadGraficos);
         Carpeta.EliminarLogica(cantidadSistemas);
         Carpeta.EliminarDLC(cantidadDLC);
-        Semaforo.release();
+        Carpeta.InsertarJuegoconDLC('J');
+        Carpeta.InicializarcantidadjuegosinDLCVar(cantidadDeJuegossinDLC);
         GananciaIntegradores += GananciaJuegoDLC;
-        cantidadDeJuegossinDLCvariable = cantidadDeJuegossinDLC;
+        //cantidadDeJuegossinDLCvariable = cantidadDeJuegossinDLC;
+        Semaforo.release();
+        } else{
+            System.out.println("Nada");
+            Semaforo.release();
+        }
+    
         }
         else{
-        Semaforo.acquire();
+        
+        if(Carpeta.ComprobarCantidadessinDLC(cantidadGuiones, cantidadNiveles, cantidadGraficos, cantidadSistemas)){
         Carpeta.EliminarNarrativa(cantidadGuiones);
         Carpeta.EliminarNiveles(cantidadNiveles);
         Carpeta.EliminarArtista(cantidadGraficos);
         Carpeta.EliminarLogica(cantidadSistemas);
-        Semaforo.release();
+        Carpeta.InsertarJuegosinDLC('J');
         GananciaIntegradores += GananciaJuego;
-        cantidadDeJuegossinDLCvariable--;
+        Carpeta.InicializarcantidadjuegosinDLCVar(Carpeta.cantidadjuegosinDLCVar-1);
+        //cantidadDeJuegossinDLCvariable--;
+        Semaforo.release();
         }
+        else{
+        System.out.println("Nada");
+        Semaforo.release();
+        }
+        }    
     }
     else{
     

@@ -67,426 +67,434 @@ public class Dashboard extends javax.swing.JFrame implements Observer {
         jLabel14 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        DiasLanzamiento = new javax.swing.JSpinner();
+        jLabel38 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel42 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        ProjectManager = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel21 = new javax.swing.JLabel();
+        Director = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        ProximoCorte = new javax.swing.JLabel();
+        ProjectManager = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         Faltas = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
         Descuento = new javax.swing.JLabel();
-        jLabel21 = new javax.swing.JLabel();
-        Director = new javax.swing.JLabel();
-        jLabel22 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        ProximoCorte = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
-        jLabel24 = new javax.swing.JLabel();
         Costos = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
         GananciasTotales = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
         Utilidad = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
+        jLabel26 = new javax.swing.JLabel();
+        NarrativaC = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        DesNivelesC = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
+        jLabel34 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+        jLabel35 = new javax.swing.JLabel();
+        DLCC = new javax.swing.JLabel();
+        SistemasC = new javax.swing.JLabel();
+        GraficosC = new javax.swing.JLabel();
+        NivelesC = new javax.swing.JLabel();
+        GuionesC = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        Faltas1 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        Descuento1 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        jLabel36 = new javax.swing.JLabel();
+        jLabel37 = new javax.swing.JLabel();
+        JuegosconDLC = new javax.swing.JLabel();
+        JuegossinDLC = new javax.swing.JLabel();
+        jLabel41 = new javax.swing.JLabel();
+        NarrativaC1 = new javax.swing.JLabel();
+        jLabel43 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         CantidadDLC1.setModel(new javax.swing.SpinnerNumberModel(1, 1, 5, 1));
+        jPanel1.add(CantidadDLC1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 230, 38, -1));
 
-        jLabel5.setFont(new java.awt.Font("Dubai Light", 0, 11)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel5.setText("Artista:");
+        jLabel5.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 10)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Artista de Sprites: ");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, -1, -1));
 
-        jLabel16.setFont(new java.awt.Font("Dubai Light", 0, 11)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel16.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 10)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setText("Integradores:");
+        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 260, -1, -1));
 
-        jLabel9.setFont(new java.awt.Font("Dubai Light", 0, 11)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel9.setText("Diseñador de niveles:");
+        jLabel9.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 10)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("Diseñador de niveles: ");
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, -1, -1));
 
         CantidadArtista.setModel(new javax.swing.SpinnerNumberModel(1, 1, 13, 1));
+        jPanel1.add(CantidadArtista, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 170, -1, -1));
 
-        jLabel10.setFont(new java.awt.Font("Dubai Light", 0, 11)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel10.setText("Cantidad Máxima de Trabajadores:");
+        jLabel10.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 12)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("Cantidad de Trabajadores:");
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, -1, -1));
 
-        jLabel17.setFont(new java.awt.Font("Dubai Light", 0, 11)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel17.setText("Narrativa:");
+        jLabel17.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 10)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel17.setText("Desarrolladores de narrativa: ");
+        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 110, -1, -1));
 
-        EDispo.setFont(new java.awt.Font("Dubai Light", 0, 11)); // NOI18N
-        EDispo.setForeground(new java.awt.Color(0, 0, 0));
+        EDispo.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 12)); // NOI18N
+        EDispo.setForeground(new java.awt.Color(255, 255, 255));
         EDispo.setText("18");
+        jPanel1.add(EDispo, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 90, 26, -1));
 
         CantidadLogica.setModel(new javax.swing.SpinnerNumberModel(1, 0, 13, 1));
+        jPanel1.add(CantidadLogica, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 200, -1, -1));
 
         CantidadNarrativa1.setModel(new javax.swing.SpinnerNumberModel(1, 1, 5, 1));
+        jPanel1.add(CantidadNarrativa1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 110, 38, -1));
 
         CantidadNarrativa.setModel(new javax.swing.SpinnerNumberModel(1, 1, 13, 1));
+        jPanel1.add(CantidadNarrativa, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 110, -1, -1));
 
         CantidadNiveles1.setModel(new javax.swing.SpinnerNumberModel(1, 1, 5, 1));
+        jPanel1.add(CantidadNiveles1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 140, 38, -1));
 
-        jLabel6.setFont(new java.awt.Font("Dubai Light", 0, 11)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel6.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 10)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Programador de Lógica:");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, -1, -1));
 
-        jLabel11.setFont(new java.awt.Font("Dubai Light", 0, 11)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel11.setText("Diseñador de niveles:");
+        jLabel11.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 10)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setText("Diseñador de niveles: ");
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 140, -1, -1));
 
         CantidadIntegradores.setModel(new javax.swing.SpinnerNumberModel(1, 1, 13, 1));
+        jPanel1.add(CantidadIntegradores, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 260, -1, -1));
 
-        jLabel12.setFont(new java.awt.Font("Dubai Light", 0, 11)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel12.setText("Cantidad Máxima de Trabajadores:");
+        jLabel12.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 12)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel12.setText("Cantidad de Trabajadores:");
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 90, -1, -1));
 
-        jLabel7.setFont(new java.awt.Font("Dubai Light", 0, 11)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel7.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 10)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Desarrollador DLC:");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, -1, -1));
 
-        jLabel1.setFont(new java.awt.Font("Dubai Light", 0, 11)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel1.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 10)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Duración del día:");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 510, 140, -1));
 
-        jLabel13.setFont(new java.awt.Font("Dubai Light", 0, 11)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel13.setText("Artista:");
+        jLabel13.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 10)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setText("Artista de Sprites: ");
+        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 170, -1, -1));
 
         CantidadIntegradores1.setModel(new javax.swing.SpinnerNumberModel(1, 1, 5, 1));
+        jPanel1.add(CantidadIntegradores1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 260, 38, -1));
 
         CantidadDLC.setModel(new javax.swing.SpinnerNumberModel(1, 1, 13, 1));
+        jPanel1.add(CantidadDLC, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 230, -1, -1));
 
         DuracionDia.setModel(new javax.swing.SpinnerNumberModel(1, 1, 10, 1));
+        jPanel1.add(DuracionDia, new org.netbeans.lib.awtextra.AbsoluteConstraints(522, 510, -1, -1));
 
-        jLabel8.setFont(new java.awt.Font("Dubai Light", 0, 11)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel8.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 10)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Integradores:");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, -1, -1));
 
-        EDispo1.setFont(new java.awt.Font("Dubai Light", 0, 11)); // NOI18N
-        EDispo1.setForeground(new java.awt.Color(0, 0, 0));
+        EDispo1.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 12)); // NOI18N
+        EDispo1.setForeground(new java.awt.Color(255, 255, 255));
         EDispo1.setText("10");
+        jPanel1.add(EDispo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 90, 26, -1));
 
         CantidadNiveles.setModel(new javax.swing.SpinnerNumberModel(1, 1, 13, 1));
+        jPanel1.add(CantidadNiveles, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 140, -1, -1));
 
-        jLabel2.setFont(new java.awt.Font("Dubai Light", 0, 11)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel2.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 10)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Día:");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 540, 60, -1));
 
         CantidadArtista1.setModel(new javax.swing.SpinnerNumberModel(1, 1, 5, 1));
+        jPanel1.add(CantidadArtista1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 170, 38, -1));
 
-        Dia.setFont(new java.awt.Font("Dubai Light", 0, 11)); // NOI18N
-        Dia.setForeground(new java.awt.Color(0, 0, 0));
+        Dia.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 10)); // NOI18N
+        Dia.setForeground(new java.awt.Color(255, 255, 255));
         Dia.setText("----");
+        jPanel1.add(Dia, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 540, 26, -1));
 
+        jButton1.setBackground(new java.awt.Color(0, 255, 0));
+        jButton1.setFont(new java.awt.Font("Perpetua Titling MT", 0, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("Guardar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 500, 120, -1));
 
         CantidadLogica1.setModel(new javax.swing.SpinnerNumberModel(1, 1, 5, 1));
+        jPanel1.add(CantidadLogica1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 200, 38, -1));
 
-        jLabel14.setFont(new java.awt.Font("Dubai Light", 0, 11)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel14.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 10)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setText("Programador de Lógica:");
+        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 200, -1, -1));
 
-        jLabel3.setFont(new java.awt.Font("Dubai Light", 0, 11)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("Narrativa:");
+        jLabel3.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 10)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Desarrolladores de narrativa: ");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, -1));
 
-        jLabel15.setFont(new java.awt.Font("Dubai Light", 0, 11)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel15.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 10)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setText("Desarrollador DLC:");
+        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 230, -1, -1));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(DuracionDia, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(34, 34, 34)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(Dia, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(20, 20, 20))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(CantidadNarrativa, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel9)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(CantidadNiveles, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addComponent(jLabel7)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(CantidadDLC, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel6)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(CantidadLogica, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel5)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(CantidadArtista, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addComponent(jLabel8)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(CantidadIntegradores, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel10)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(EDispo, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel17)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(CantidadNarrativa1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel11)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(CantidadNiveles1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel12)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(EDispo1, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addComponent(jLabel15)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(CantidadDLC1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel14)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(CantidadLogica1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel13)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(CantidadArtista1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addComponent(jLabel16)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(CantidadIntegradores1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(97, 97, 97)))
-                .addContainerGap())
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(45, 45, 45)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(EDispo)
-                            .addComponent(jLabel10))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
-                            .addComponent(CantidadNarrativa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel9)
-                            .addComponent(CantidadNiveles, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel5)
-                            .addComponent(CantidadArtista, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel6)
-                            .addComponent(CantidadLogica, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel7)
-                            .addComponent(CantidadDLC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel8)
-                            .addComponent(CantidadIntegradores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(EDispo1)
-                            .addComponent(jLabel12))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel17)
-                            .addComponent(CantidadNarrativa1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel11)
-                            .addComponent(CantidadNiveles1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel13)
-                            .addComponent(CantidadArtista1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel14)
-                            .addComponent(CantidadLogica1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel15)
-                            .addComponent(CantidadDLC1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel16)
-                            .addComponent(CantidadIntegradores1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton1)
-                        .addGap(10, 10, 10))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel1)
-                            .addComponent(DuracionDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(Dia))))
-                .addGap(32, 32, 32))
-        );
+        jLabel25.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel25.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 10)); // NOI18N
+        jLabel25.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel25.setText("Dias Lanzamiento:");
+        jPanel1.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 510, 120, -1));
+
+        DiasLanzamiento.setModel(new javax.swing.SpinnerNumberModel(1, 1, 10, 1));
+        jPanel1.add(DiasLanzamiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(334, 510, -1, -1));
+
+        jLabel38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Capcom_Dashboard.jpg"))); // NOI18N
+        jPanel1.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, -1, 100));
+
+        jLabel39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Vs_Dashboard.jpg"))); // NOI18N
+        jPanel1.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 0, -1, -1));
+
+        jLabel40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Bethesda_Dashboard.png"))); // NOI18N
+        jPanel1.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 0, 220, 77));
 
         jTabbedPane1.addTab("Dashboard", jPanel1);
 
-        ProjectManager.setText("---");
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel4.setText("PM:");
-
-        jLabel18.setText("Proximo Corte:");
-
-        ProximoCorte.setText("---");
-
-        jLabel19.setText("Faltas:");
-
-        Faltas.setText("0");
-
-        jLabel20.setText("Descuento: ");
-
-        Descuento.setText("0");
-
-        jLabel21.setText("Director:");
-
-        Director.setText("---");
-
-        jLabel22.setText("Utilidad:");
-
-        jLabel23.setText("Costos Totales:");
-
-        jLabel24.setText("Ganancias Totales");
-
-        Costos.setText("0");
-
-        GananciasTotales.setText("0");
-
-        Utilidad.setText("0");
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel20)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Descuento, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(Faltas, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(ProximoCorte, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ProjectManager, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(Director, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel23)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(Costos, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(Utilidad, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(GananciasTotales, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
-                .addContainerGap(83, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel21)
-                    .addComponent(Director)
-                    .addComponent(jLabel22)
-                    .addComponent(Utilidad))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(ProjectManager)
-                    .addComponent(jLabel4))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(Faltas)
-                        .addComponent(jLabel24)
-                        .addComponent(GananciasTotales))
-                    .addComponent(jLabel19))
-                .addGap(11, 11, 11)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel20)
-                    .addComponent(Descuento))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel18)
-                    .addComponent(ProximoCorte)
-                    .addComponent(jLabel23)
-                    .addComponent(Costos))
-                .addContainerGap(200, Short.MAX_VALUE))
-        );
-
-        jTabbedPane1.addTab("Capcom", jPanel2);
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 536, Short.MAX_VALUE)
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 363, Short.MAX_VALUE)
-        );
+        jLabel42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Bethesda_pestaña.jpg"))); // NOI18N
+        jPanel3.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 570, 140));
 
         jTabbedPane1.addTab("Bethesda", jPanel3);
+
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel4.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel21.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(0, 102, 255));
+        jLabel21.setText("Director:");
+        jPanel4.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 51, -1));
+
+        Director.setForeground(new java.awt.Color(0, 102, 255));
+        Director.setText("---");
+        jPanel4.add(Director, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, 173, -1));
+
+        jLabel4.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(51, 102, 255));
+        jLabel4.setText("PM:");
+        jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 34, -1));
+
+        ProjectManager.setForeground(new java.awt.Color(0, 102, 255));
+        ProjectManager.setText("---");
+        jPanel4.add(ProjectManager, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, 173, -1));
+
+        jLabel19.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(51, 102, 255));
+        jLabel19.setText("Faltas:");
+        jPanel4.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 51, -1));
+
+        Faltas.setForeground(new java.awt.Color(0, 102, 255));
+        Faltas.setText("0");
+        jPanel4.add(Faltas, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 220, 173, -1));
+
+        jLabel20.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(51, 102, 255));
+        jLabel20.setText("Descuento: ");
+        jPanel4.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, -1, -1));
+
+        Descuento.setForeground(new java.awt.Color(0, 102, 255));
+        Descuento.setText("0");
+        jPanel4.add(Descuento, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 240, 173, -1));
+
+        jLabel18.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(51, 102, 255));
+        jLabel18.setText("Proximo Corte:");
+        jPanel4.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 94, -1));
+
+        ProximoCorte.setForeground(new java.awt.Color(0, 102, 255));
+        ProximoCorte.setText("---");
+        jPanel4.add(ProximoCorte, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 270, 173, -1));
+
+        jLabel23.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
+        jLabel23.setForeground(new java.awt.Color(0, 102, 255));
+        jLabel23.setText("Costos Totales:");
+        jPanel4.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 220, -1, -1));
+
+        Costos.setForeground(new java.awt.Color(0, 102, 255));
+        Costos.setText("0");
+        jPanel4.add(Costos, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 220, 74, -1));
+
+        jLabel24.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
+        jLabel24.setForeground(new java.awt.Color(0, 102, 255));
+        jLabel24.setText("Ganancias Totales");
+        jPanel4.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 190, 107, -1));
+
+        GananciasTotales.setForeground(new java.awt.Color(0, 102, 255));
+        GananciasTotales.setText("0");
+        jPanel4.add(GananciasTotales, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 190, 74, -1));
+
+        jLabel22.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(0, 102, 255));
+        jLabel22.setText("Utilidad:");
+        jPanel4.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 160, 55, -1));
+
+        Utilidad.setForeground(new java.awt.Color(0, 102, 255));
+        Utilidad.setText("0");
+        jPanel4.add(Utilidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 160, 74, -1));
+
+        jLabel26.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
+        jLabel26.setForeground(new java.awt.Color(51, 102, 255));
+        jLabel26.setText("Narrativa:");
+        jPanel4.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 59, -1));
+
+        NarrativaC.setForeground(new java.awt.Color(0, 102, 255));
+        NarrativaC.setText("---");
+        jPanel4.add(NarrativaC, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 340, 173, -1));
+
+        jLabel27.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
+        jLabel27.setForeground(new java.awt.Color(51, 102, 255));
+        jLabel27.setText("Desa. Niveles");
+        jPanel4.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, 83, -1));
+
+        DesNivelesC.setForeground(new java.awt.Color(0, 102, 255));
+        DesNivelesC.setText("---");
+        jPanel4.add(DesNivelesC, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 380, 173, -1));
+
+        jLabel33.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
+        jLabel33.setForeground(new java.awt.Color(0, 102, 255));
+        jLabel33.setText("Guiones:");
+        jPanel4.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 330, 51, -1));
+
+        jLabel34.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
+        jLabel34.setForeground(new java.awt.Color(0, 102, 255));
+        jLabel34.setText("Niveles");
+        jPanel4.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 360, 83, -1));
+
+        jLabel31.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
+        jLabel31.setForeground(new java.awt.Color(0, 102, 255));
+        jLabel31.setText("Graficos:");
+        jPanel4.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 390, 51, -1));
+
+        jLabel32.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
+        jLabel32.setForeground(new java.awt.Color(0, 102, 255));
+        jLabel32.setText("Sistemas:");
+        jPanel4.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 420, -1, -1));
+
+        jLabel35.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
+        jLabel35.setForeground(new java.awt.Color(0, 102, 255));
+        jLabel35.setText("DLC:");
+        jPanel4.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 450, 69, -1));
+
+        DLCC.setForeground(new java.awt.Color(0, 102, 255));
+        DLCC.setText("---");
+        jPanel4.add(DLCC, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 450, 173, -1));
+
+        SistemasC.setForeground(new java.awt.Color(0, 102, 255));
+        SistemasC.setText("---");
+        jPanel4.add(SistemasC, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 420, 173, -1));
+
+        GraficosC.setForeground(new java.awt.Color(0, 102, 255));
+        GraficosC.setText("---");
+        jPanel4.add(GraficosC, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 390, 173, -1));
+
+        NivelesC.setForeground(new java.awt.Color(0, 102, 255));
+        NivelesC.setText("---");
+        jPanel4.add(NivelesC, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 360, 173, -1));
+
+        GuionesC.setForeground(new java.awt.Color(0, 102, 255));
+        GuionesC.setText("---");
+        jPanel4.add(GuionesC, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 330, 173, -1));
+
+        jLabel29.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
+        jLabel29.setForeground(new java.awt.Color(51, 102, 255));
+        jLabel29.setText("Artistas:");
+        jPanel4.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, 51, -1));
+
+        Faltas1.setForeground(new java.awt.Color(0, 102, 255));
+        Faltas1.setText("---");
+        jPanel4.add(Faltas1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 400, 173, -1));
+
+        jLabel30.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
+        jLabel30.setForeground(new java.awt.Color(51, 102, 255));
+        jLabel30.setText("Logica:");
+        jPanel4.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, -1, -1));
+
+        Descuento1.setForeground(new java.awt.Color(0, 102, 255));
+        Descuento1.setText("---");
+        jPanel4.add(Descuento1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 420, 173, -1));
+
+        jLabel28.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
+        jLabel28.setForeground(new java.awt.Color(51, 102, 255));
+        jLabel28.setText("Desarrollador DLC:");
+        jPanel4.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 420, 110, -1));
+
+        jLabel36.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
+        jLabel36.setForeground(new java.awt.Color(0, 102, 255));
+        jLabel36.setText("Juegos con DLC:");
+        jPanel4.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 490, 97, -1));
+
+        jLabel37.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
+        jLabel37.setForeground(new java.awt.Color(0, 102, 255));
+        jLabel37.setText("Juegos sin DLC:");
+        jPanel4.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 520, 97, -1));
+
+        JuegosconDLC.setForeground(new java.awt.Color(0, 102, 255));
+        JuegosconDLC.setText("---");
+        jPanel4.add(JuegosconDLC, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 490, 173, -1));
+
+        JuegossinDLC.setForeground(new java.awt.Color(0, 102, 255));
+        JuegossinDLC.setText("---");
+        jPanel4.add(JuegossinDLC, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 520, 173, -1));
+
+        jLabel41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Capcom_pestaña.jpg"))); // NOI18N
+        jPanel4.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 570, 150));
+
+        NarrativaC1.setForeground(new java.awt.Color(0, 102, 255));
+        NarrativaC1.setText("---");
+        jPanel4.add(NarrativaC1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 360, 173, -1));
+
+        jLabel43.setBackground(new java.awt.Color(255, 255, 153));
+        jLabel43.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Ryu_chiquitito.png"))); // NOI18N
+        jPanel4.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 430, 160, 170));
+
+        jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 570, 600));
+
+        jTabbedPane1.addTab("Capcom", jPanel2);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -525,6 +533,9 @@ public class Dashboard extends javax.swing.JFrame implements Observer {
             ProyectoSO_CaicedoPernia2.Empresa1.ReasignarCantidadesInterfaz((int)this.CantidadNarrativa.getValue(), (int)this.CantidadNiveles.getValue(), (int)this.CantidadArtista.getValue(), (int)this.CantidadLogica.getValue(), (int)this.CantidadDLC.getValue(), (int)this.CantidadIntegradores.getValue());
             ProyectoSO_CaicedoPernia2.Empresa2.ReasignarCantidadesInterfaz((int)this.CantidadNarrativa1.getValue(), (int)this.CantidadNiveles1.getValue(), (int)this.CantidadArtista1.getValue(), (int)this.CantidadLogica1.getValue(), (int)this.CantidadDLC1.getValue(), (int)this.CantidadIntegradores1.getValue());
             Empresa1.t1.ModificarDuracionDias((int)this.DuracionDia.getValue());
+            Empresa1.D1.ModificarDuracion((int)this.DuracionDia.getValue()*1000,(int)this.DiasLanzamiento.getValue());
+            Empresa1.P1.ModificarDuracionyLanzamiento((int)this.DuracionDia.getValue()*1000, (int)this.DiasLanzamiento.getValue());
+       
             
         }
         
@@ -586,16 +597,29 @@ public class Dashboard extends javax.swing.JFrame implements Observer {
     private javax.swing.JSpinner CantidadNiveles;
     private javax.swing.JSpinner CantidadNiveles1;
     private javax.swing.JLabel Costos;
+    private javax.swing.JLabel DLCC;
+    private javax.swing.JLabel DesNivelesC;
     private javax.swing.JLabel Descuento;
+    private javax.swing.JLabel Descuento1;
     private javax.swing.JLabel Dia;
+    private javax.swing.JSpinner DiasLanzamiento;
     private javax.swing.JLabel Director;
     private javax.swing.JSpinner DuracionDia;
     private javax.swing.JLabel EDispo;
     private javax.swing.JLabel EDispo1;
     private javax.swing.JLabel Faltas;
+    private javax.swing.JLabel Faltas1;
     private javax.swing.JLabel GananciasTotales;
+    private javax.swing.JLabel GraficosC;
+    private javax.swing.JLabel GuionesC;
+    private javax.swing.JLabel JuegosconDLC;
+    private javax.swing.JLabel JuegossinDLC;
+    private javax.swing.JLabel NarrativaC;
+    private javax.swing.JLabel NarrativaC1;
+    private javax.swing.JLabel NivelesC;
     private javax.swing.JLabel ProjectManager;
     private javax.swing.JLabel ProximoCorte;
+    private javax.swing.JLabel SistemasC;
     private javax.swing.JLabel Utilidad;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
@@ -615,8 +639,27 @@ public class Dashboard extends javax.swing.JFrame implements Observer {
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -625,6 +668,7 @@ public class Dashboard extends javax.swing.JFrame implements Observer {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JTabbedPane jTabbedPane1;
     // End of variables declaration//GEN-END:variables
 
@@ -642,6 +686,10 @@ public class Dashboard extends javax.swing.JFrame implements Observer {
         if(String.valueOf(arg)=="Cambiando Contador" || String.valueOf(arg)=="Ve Stream" || String.valueOf(arg)=="Tareas Administrativas"){
         this.ProjectManager.setText(String.valueOf(arg));
         }
+        else if(String.valueOf(arg)=="Labores Administrativas" ||String.valueOf(arg)=="Enviar Videojuegos"){
+        this.Director.setText(String.valueOf(arg));
+        }
+        
         else{
         this.ProximoCorte.setText(String.valueOf(arg));
         }
@@ -666,17 +714,47 @@ public class Dashboard extends javax.swing.JFrame implements Observer {
             else if(c.Utilidad==Integer.parseInt(arg1)){
             this.Utilidad.setText(String.valueOf(arg));
             }
-            else{
+           /* else{
             if(Integer.parseInt(arg1)==11111){
             this.Director.setText(String.valueOf("Labores Administrativas"));
             }
             else{
             this.Director.setText(String.valueOf("Enviar Videojuegos"));
             }
-            }
+            }*/
             }catch(Exception a){
+                try {
+                Drive c = (Drive) o;
+                if(c.B==null){
+                String arg1 = String.valueOf(arg);
+                if(c.posicionNarrativa==Integer.parseInt(arg1)){
+                this.GuionesC.setText(String.valueOf(arg));
+                }
+                else if(c.posicionNiveles==Integer.parseInt(arg1)){
+                this.NivelesC.setText(String.valueOf(arg));
+                }
+                else if(c.posicionArtista==Integer.parseInt(arg1)){
+                this.GraficosC.setText(String.valueOf(arg));
+                }
+                else if(c.posicionLogica==Integer.parseInt(arg1)){
+                this.SistemasC.setText(String.valueOf(arg));
+                }
+                else if(c.posicionDLC==Integer.parseInt(arg1)){
+                this.DLCC.setText(String.valueOf(arg));
+                }
+                else if(c.posicionJuegosconDLC==Integer.parseInt(arg1)){
+                    
+                    this.JuegosconDLC.setText(String.valueOf(arg));
+                }
+                else if(c.posicionJuegossinDLC==Integer.parseInt(arg1)){
+                    this.JuegossinDLC.setText(String.valueOf(arg));
+                }
+                }
             
-            }
+            }catch(Exception q){
+                
+                
+            }}
         
         }
     }}
