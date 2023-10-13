@@ -23,9 +23,10 @@ public class ProjectManager extends Observable implements Runnable {
     int VerStream;
     int CostoEmpleado;
     String Estado;
+    String Identificador;
     
 
-    public ProjectManager(int Duraciondias, int DiasLanzamiento) {
+    public ProjectManager(int Duraciondias, int DiasLanzamiento, String Identificador) {
         this.Duraciondias = Duraciondias;
         this.DiasLanzamientoVariable = DiasLanzamiento;
         this.DiasLanzamiento = DiasLanzamiento;
@@ -35,6 +36,7 @@ public class ProjectManager extends Observable implements Runnable {
         this.VerStream = 0;
         this.CostoEmpleado=0;
         this.Estado = "";
+        this.Identificador = Identificador;
     }
     
     public void ModificarDuracionyLanzamiento(int duracionnueva, int lanzamientonuevo){

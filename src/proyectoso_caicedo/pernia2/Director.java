@@ -71,6 +71,7 @@ public class Director extends Observable implements Runnable{
                 int numeroAleatorio = random.nextInt(24 - 0 + 1) + 0;
                 HorasdeunDia -= numeroAleatorio*hora;
                 Thread.sleep((long) (numeroAleatorio*hora));
+
                 if("Ve Stream".equals(PM.Estado)){
                     
                 faltas+=1;

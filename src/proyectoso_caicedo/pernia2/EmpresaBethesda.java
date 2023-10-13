@@ -4,7 +4,9 @@
  */
 package proyectoso_caicedo.pernia2;
 
+import java.util.Observer;
 import java.util.concurrent.Semaphore;
+import static proyectoso_caicedo.pernia2.ProyectoSO_CaicedoPernia2.Empresa2;
 
 /**
  *
@@ -13,6 +15,7 @@ import java.util.concurrent.Semaphore;
 public class EmpresaBethesda {
     
     Desarrollador[] Hilos;
+    int DiasLanzamiento;
     int DuracionDia;
     int CantidadNiveles;
     int CantidadNarrativa;
@@ -21,8 +24,11 @@ public class EmpresaBethesda {
     int CantidadArtista;
     int PagosEmpleados; 
     int CantidadIntegrador;
+    Tiempo t1;
+    ProjectManager P2;
+    Director D1;
 
-    public EmpresaBethesda(int DuracionDia, int CantidadNarrativa, int CantidadNiveles, int CantidadArtista, int CantidadLogica, int CantidadDLC, int cantidadIntegrador) {
+    public EmpresaBethesda(int DuracionDia, int CantidadNarrativa, int CantidadNiveles, int CantidadArtista, int CantidadLogica, int CantidadDLC, int cantidadIntegrador, int DiasLanzamiento) {
         this.DuracionDia = DuracionDia * 1000;
         this.CantidadNarrativa = CantidadNarrativa;
         this.CantidadNiveles = CantidadNiveles;
@@ -32,16 +38,20 @@ public class EmpresaBethesda {
         this.CantidadIntegrador = cantidadIntegrador;
         this.Hilos = new Desarrollador[10];
         this.PagosEmpleados = 0;
+        this.DiasLanzamiento = DiasLanzamiento;
     }
     
     
-    public void InicializarHilos(){
+    public void InicializarHilos(Dashboard Interfaz){
         Semaphore Semaforo = new Semaphore(1); 
         Drive Carpetas = new Drive("Carpetas", null, this);
+        Carpetas.InicializarcantidadjuegosinDLCVar(6);
+        Carpetas.addObserver(Interfaz);
         for (int i = 0; i < Hilos.length; i++) {
            Hilos[i] = new Desarrollador(0,0,DuracionDia,Semaforo,Carpetas,0,2,3,4,6,5,450000,6,900000);
             Hilos[i].start();
         }
+        this.CrearDirector(Interfaz, Carpetas, null, Empresa2);
     
     }
     
@@ -73,7 +83,8 @@ public class EmpresaBethesda {
         }
      
     for (int i = CantidadNarrativa + CantidadNiveles + CantidadArtista + CantidadLogica + CantidadDLC; i < CantidadNarrativa + CantidadNiveles + CantidadArtista + CantidadLogica + CantidadDLC + CantidadIntegrador; i++) {
-             Hilos[i].tipo = 6;
+        System.out.println(i);     
+        Hilos[i].tipo = 6;
         }
      
      }
@@ -115,4 +126,20 @@ public class EmpresaBethesda {
             PagosEmpleados += Hilos[i].CostoporEmpleado;
         }
       }
+      
+    public void CrearProjectManajer(Observer Interfaz){
+    P2 = new ProjectManager(DuracionDia,DiasLanzamiento,"Beth");
+    P2.addObserver(Interfaz);
+    Thread HiloProjectManager2 = new Thread(P2);
+    HiloProjectManager2.start();
+    }
+    
+    public void CrearDirector(Observer Interfaz, Drive Carpeta, EmpresaCapcom CAP,EmpresaBethesda BET){
+    D1 = new Director(DiasLanzamiento,DuracionDia,P2,Carpeta,null,BET); 
+    D1.addObserver(Interfaz);
+    Thread HiloDirector = new Thread(D1);
+    HiloDirector.start();
+    }
+      
+      
 }

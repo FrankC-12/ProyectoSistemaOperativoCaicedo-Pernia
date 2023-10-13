@@ -4,10 +4,18 @@
  */
 package proyectoso_caicedo.pernia2;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Observable;
 import java.util.Observer;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import static proyectoso_caicedo.pernia2.ProyectoSO_CaicedoPernia2.Empresa1;
+import static proyectoso_caicedo.pernia2.ProyectoSO_CaicedoPernia2.Empresa2;
 
 /**
  *
@@ -72,8 +80,56 @@ public class Dashboard extends javax.swing.JFrame implements Observer {
         jLabel38 = new javax.swing.JLabel();
         jLabel39 = new javax.swing.JLabel();
         jLabel40 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel42 = new javax.swing.JLabel();
+        jLabel48 = new javax.swing.JLabel();
+        Director1 = new javax.swing.JLabel();
+        jLabel49 = new javax.swing.JLabel();
+        ProjectManager1 = new javax.swing.JLabel();
+        jLabel50 = new javax.swing.JLabel();
+        Faltas2 = new javax.swing.JLabel();
+        jLabel51 = new javax.swing.JLabel();
+        Descuento2 = new javax.swing.JLabel();
+        jLabel52 = new javax.swing.JLabel();
+        ProximoCorte1 = new javax.swing.JLabel();
+        jLabel53 = new javax.swing.JLabel();
+        Costos1 = new javax.swing.JLabel();
+        jLabel54 = new javax.swing.JLabel();
+        GananciasTotales1 = new javax.swing.JLabel();
+        jLabel55 = new javax.swing.JLabel();
+        Utilidad1 = new javax.swing.JLabel();
+        jLabel56 = new javax.swing.JLabel();
+        NarraB = new javax.swing.JLabel();
+        jLabel57 = new javax.swing.JLabel();
+        ArtB = new javax.swing.JLabel();
+        jLabel58 = new javax.swing.JLabel();
+        jLabel59 = new javax.swing.JLabel();
+        jLabel60 = new javax.swing.JLabel();
+        jLabel61 = new javax.swing.JLabel();
+        jLabel62 = new javax.swing.JLabel();
+        DLCC1 = new javax.swing.JLabel();
+        SistemasC1 = new javax.swing.JLabel();
+        GraficosC1 = new javax.swing.JLabel();
+        NivelesC1 = new javax.swing.JLabel();
+        GuionesC1 = new javax.swing.JLabel();
+        jLabel63 = new javax.swing.JLabel();
+        LogB = new javax.swing.JLabel();
+        jLabel64 = new javax.swing.JLabel();
+        DLB = new javax.swing.JLabel();
+        jLabel65 = new javax.swing.JLabel();
+        jLabel66 = new javax.swing.JLabel();
+        jLabel67 = new javax.swing.JLabel();
+        JuegosconDLC1 = new javax.swing.JLabel();
+        JuegossinDLC1 = new javax.swing.JLabel();
+        NiB = new javax.swing.JLabel();
+        jLabel68 = new javax.swing.JLabel();
+        jLabel69 = new javax.swing.JLabel();
+        jLabel70 = new javax.swing.JLabel();
+        jLabel71 = new javax.swing.JLabel();
+        jLabel72 = new javax.swing.JLabel();
+        IntB = new javax.swing.JLabel();
+        jLabel74 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jLabel21 = new javax.swing.JLabel();
@@ -93,9 +149,9 @@ public class Dashboard extends javax.swing.JFrame implements Observer {
         jLabel22 = new javax.swing.JLabel();
         Utilidad = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
-        NarrativaC = new javax.swing.JLabel();
+        NarraC = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
-        DesNivelesC = new javax.swing.JLabel();
+        ArtC = new javax.swing.JLabel();
         jLabel33 = new javax.swing.JLabel();
         jLabel34 = new javax.swing.JLabel();
         jLabel31 = new javax.swing.JLabel();
@@ -107,17 +163,23 @@ public class Dashboard extends javax.swing.JFrame implements Observer {
         NivelesC = new javax.swing.JLabel();
         GuionesC = new javax.swing.JLabel();
         jLabel29 = new javax.swing.JLabel();
-        Faltas1 = new javax.swing.JLabel();
+        LogC = new javax.swing.JLabel();
         jLabel30 = new javax.swing.JLabel();
-        Descuento1 = new javax.swing.JLabel();
+        DL = new javax.swing.JLabel();
         jLabel28 = new javax.swing.JLabel();
         jLabel36 = new javax.swing.JLabel();
         jLabel37 = new javax.swing.JLabel();
         JuegosconDLC = new javax.swing.JLabel();
         JuegossinDLC = new javax.swing.JLabel();
         jLabel41 = new javax.swing.JLabel();
-        NarrativaC1 = new javax.swing.JLabel();
+        NiC = new javax.swing.JLabel();
         jLabel43 = new javax.swing.JLabel();
+        jLabel44 = new javax.swing.JLabel();
+        jLabel45 = new javax.swing.JLabel();
+        jLabel46 = new javax.swing.JLabel();
+        jLabel47 = new javax.swing.JLabel();
+        IntC = new javax.swing.JLabel();
+        jLabel73 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -125,25 +187,25 @@ public class Dashboard extends javax.swing.JFrame implements Observer {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         CantidadDLC1.setModel(new javax.swing.SpinnerNumberModel(1, 1, 5, 1));
-        jPanel1.add(CantidadDLC1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 230, 38, -1));
+        jPanel1.add(CantidadDLC1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 250, 38, -1));
 
         jLabel5.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 10)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Artista de Sprites: ");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, -1, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, -1, -1));
 
         jLabel16.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 10)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setText("Integradores:");
-        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 260, -1, -1));
+        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 280, -1, -1));
 
         jLabel9.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 10)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Diseñador de niveles: ");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, -1, -1));
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, -1));
 
         CantidadArtista.setModel(new javax.swing.SpinnerNumberModel(1, 1, 13, 1));
-        jPanel1.add(CantidadArtista, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 170, -1, -1));
+        jPanel1.add(CantidadArtista, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 190, -1, -1));
 
         jLabel10.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 12)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
@@ -153,7 +215,7 @@ public class Dashboard extends javax.swing.JFrame implements Observer {
         jLabel17.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 10)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setText("Desarrolladores de narrativa: ");
-        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 110, -1, -1));
+        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 130, -1, -1));
 
         EDispo.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 12)); // NOI18N
         EDispo.setForeground(new java.awt.Color(255, 255, 255));
@@ -161,29 +223,29 @@ public class Dashboard extends javax.swing.JFrame implements Observer {
         jPanel1.add(EDispo, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 90, 26, -1));
 
         CantidadLogica.setModel(new javax.swing.SpinnerNumberModel(1, 0, 13, 1));
-        jPanel1.add(CantidadLogica, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 200, -1, -1));
+        jPanel1.add(CantidadLogica, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 220, -1, -1));
 
         CantidadNarrativa1.setModel(new javax.swing.SpinnerNumberModel(1, 1, 5, 1));
-        jPanel1.add(CantidadNarrativa1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 110, 38, -1));
+        jPanel1.add(CantidadNarrativa1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 130, 38, -1));
 
         CantidadNarrativa.setModel(new javax.swing.SpinnerNumberModel(1, 1, 13, 1));
-        jPanel1.add(CantidadNarrativa, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 110, -1, -1));
+        jPanel1.add(CantidadNarrativa, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 130, -1, -1));
 
         CantidadNiveles1.setModel(new javax.swing.SpinnerNumberModel(1, 1, 5, 1));
-        jPanel1.add(CantidadNiveles1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 140, 38, -1));
+        jPanel1.add(CantidadNiveles1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 160, 38, -1));
 
         jLabel6.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 10)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Programador de Lógica:");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, -1, -1));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, -1));
 
         jLabel11.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 10)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Diseñador de niveles: ");
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 140, -1, -1));
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 160, -1, -1));
 
         CantidadIntegradores.setModel(new javax.swing.SpinnerNumberModel(1, 1, 13, 1));
-        jPanel1.add(CantidadIntegradores, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 260, -1, -1));
+        jPanel1.add(CantidadIntegradores, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 280, -1, -1));
 
         jLabel12.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 12)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
@@ -193,32 +255,32 @@ public class Dashboard extends javax.swing.JFrame implements Observer {
         jLabel7.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 10)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Desarrollador DLC:");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, -1, -1));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, -1, -1));
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 10)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Duración del día:");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 510, 140, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 430, 140, -1));
 
         jLabel13.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 10)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setText("Artista de Sprites: ");
-        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 170, -1, -1));
+        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 190, -1, -1));
 
         CantidadIntegradores1.setModel(new javax.swing.SpinnerNumberModel(1, 1, 5, 1));
-        jPanel1.add(CantidadIntegradores1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 260, 38, -1));
+        jPanel1.add(CantidadIntegradores1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 280, 38, -1));
 
         CantidadDLC.setModel(new javax.swing.SpinnerNumberModel(1, 1, 13, 1));
-        jPanel1.add(CantidadDLC, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 230, -1, -1));
+        jPanel1.add(CantidadDLC, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 250, -1, -1));
 
         DuracionDia.setModel(new javax.swing.SpinnerNumberModel(1, 1, 10, 1));
-        jPanel1.add(DuracionDia, new org.netbeans.lib.awtextra.AbsoluteConstraints(522, 510, -1, -1));
+        jPanel1.add(DuracionDia, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 430, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 10)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Integradores:");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, -1, -1));
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, -1, -1));
 
         EDispo1.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 12)); // NOI18N
         EDispo1.setForeground(new java.awt.Color(255, 255, 255));
@@ -226,21 +288,21 @@ public class Dashboard extends javax.swing.JFrame implements Observer {
         jPanel1.add(EDispo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 90, 26, -1));
 
         CantidadNiveles.setModel(new javax.swing.SpinnerNumberModel(1, 1, 13, 1));
-        jPanel1.add(CantidadNiveles, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 140, -1, -1));
+        jPanel1.add(CantidadNiveles, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 160, -1, -1));
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 10)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Día:");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 540, 60, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 460, 60, -1));
 
         CantidadArtista1.setModel(new javax.swing.SpinnerNumberModel(1, 1, 5, 1));
-        jPanel1.add(CantidadArtista1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 170, 38, -1));
+        jPanel1.add(CantidadArtista1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 190, 38, -1));
 
         Dia.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 10)); // NOI18N
         Dia.setForeground(new java.awt.Color(255, 255, 255));
         Dia.setText("----");
-        jPanel1.add(Dia, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 540, 26, -1));
+        jPanel1.add(Dia, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 460, 26, -1));
 
         jButton1.setBackground(new java.awt.Color(0, 255, 0));
         jButton1.setFont(new java.awt.Font("Perpetua Titling MT", 0, 14)); // NOI18N
@@ -251,34 +313,34 @@ public class Dashboard extends javax.swing.JFrame implements Observer {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 500, 120, -1));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, 120, -1));
 
         CantidadLogica1.setModel(new javax.swing.SpinnerNumberModel(1, 1, 5, 1));
-        jPanel1.add(CantidadLogica1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 200, 38, -1));
+        jPanel1.add(CantidadLogica1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 220, 38, -1));
 
         jLabel14.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 10)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setText("Programador de Lógica:");
-        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 200, -1, -1));
+        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 220, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 10)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Desarrolladores de narrativa: ");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, -1, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
 
         jLabel15.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 10)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setText("Desarrollador DLC:");
-        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 230, -1, -1));
+        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 250, -1, -1));
 
         jLabel25.setBackground(new java.awt.Color(255, 255, 255));
         jLabel25.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 10)); // NOI18N
         jLabel25.setForeground(new java.awt.Color(255, 255, 255));
         jLabel25.setText("Dias Lanzamiento:");
-        jPanel1.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 510, 120, -1));
+        jPanel1.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 430, 120, -1));
 
         DiasLanzamiento.setModel(new javax.swing.SpinnerNumberModel(1, 1, 10, 1));
-        jPanel1.add(DiasLanzamiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(334, 510, -1, -1));
+        jPanel1.add(DiasLanzamiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 430, -1, -1));
 
         jLabel38.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Capcom_Dashboard.jpg"))); // NOI18N
         jPanel1.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, -1, 100));
@@ -289,12 +351,238 @@ public class Dashboard extends javax.swing.JFrame implements Observer {
         jLabel40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Bethesda_Dashboard.png"))); // NOI18N
         jPanel1.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 0, 220, 77));
 
+        jButton2.setBackground(new java.awt.Color(204, 0, 51));
+        jButton2.setFont(new java.awt.Font("Perpetua Titling MT", 0, 14)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(0, 0, 0));
+        jButton2.setText("SALIR");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 530, 120, -1));
+
         jTabbedPane1.addTab("Dashboard", jPanel1);
 
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Bethesda_pestaña.jpg"))); // NOI18N
         jPanel3.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 570, 140));
+
+        jLabel48.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
+        jLabel48.setForeground(new java.awt.Color(0, 102, 255));
+        jLabel48.setText("Director:");
+        jPanel3.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 51, -1));
+
+        Director1.setForeground(new java.awt.Color(0, 102, 255));
+        Director1.setText("---");
+        jPanel3.add(Director1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, 173, -1));
+
+        jLabel49.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
+        jLabel49.setForeground(new java.awt.Color(51, 102, 255));
+        jLabel49.setText("Project Manager:");
+        jPanel3.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 100, -1));
+
+        ProjectManager1.setForeground(new java.awt.Color(0, 102, 255));
+        ProjectManager1.setText("---");
+        jPanel3.add(ProjectManager1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 210, 173, -1));
+
+        jLabel50.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
+        jLabel50.setForeground(new java.awt.Color(51, 102, 255));
+        jLabel50.setText("Faltas:");
+        jPanel3.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 51, -1));
+
+        Faltas2.setForeground(new java.awt.Color(0, 102, 255));
+        Faltas2.setText("0");
+        jPanel3.add(Faltas2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 230, 173, -1));
+
+        jLabel51.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
+        jLabel51.setForeground(new java.awt.Color(51, 102, 255));
+        jLabel51.setText("Descuento: ");
+        jPanel3.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, -1, -1));
+
+        Descuento2.setForeground(new java.awt.Color(0, 102, 255));
+        Descuento2.setText("0");
+        jPanel3.add(Descuento2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 250, 173, -1));
+
+        jLabel52.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
+        jLabel52.setForeground(new java.awt.Color(51, 102, 255));
+        jLabel52.setText("Proximo Corte:");
+        jPanel3.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 550, 94, -1));
+
+        ProximoCorte1.setForeground(new java.awt.Color(0, 102, 255));
+        ProximoCorte1.setText("---");
+        jPanel3.add(ProximoCorte1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 550, 173, -1));
+
+        jLabel53.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
+        jLabel53.setForeground(new java.awt.Color(0, 102, 255));
+        jLabel53.setText("Costos Totales:");
+        jPanel3.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 250, -1, -1));
+
+        Costos1.setForeground(new java.awt.Color(0, 102, 255));
+        Costos1.setText("0");
+        jPanel3.add(Costos1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 250, 74, -1));
+
+        jLabel54.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
+        jLabel54.setForeground(new java.awt.Color(0, 102, 255));
+        jLabel54.setText("Ganancias Totales");
+        jPanel3.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 220, 107, -1));
+
+        GananciasTotales1.setForeground(new java.awt.Color(0, 102, 255));
+        GananciasTotales1.setText("0");
+        jPanel3.add(GananciasTotales1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 220, 74, -1));
+
+        jLabel55.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
+        jLabel55.setForeground(new java.awt.Color(0, 102, 255));
+        jLabel55.setText("Utilidad:");
+        jPanel3.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 190, 55, -1));
+
+        Utilidad1.setForeground(new java.awt.Color(0, 102, 255));
+        Utilidad1.setText("0");
+        jPanel3.add(Utilidad1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 190, 74, -1));
+
+        jLabel56.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
+        jLabel56.setForeground(new java.awt.Color(51, 102, 255));
+        jLabel56.setText("Desarrollador Narrativa:");
+        jPanel3.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 130, -1));
+
+        NarraB.setForeground(new java.awt.Color(0, 102, 255));
+        NarraB.setText("---");
+        jPanel3.add(NarraB, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 340, 173, -1));
+
+        jLabel57.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
+        jLabel57.setForeground(new java.awt.Color(51, 102, 255));
+        jLabel57.setText("Desarrollador de Niveles: ");
+        jPanel3.add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, 130, -1));
+
+        ArtB.setForeground(new java.awt.Color(0, 102, 255));
+        ArtB.setText("---");
+        jPanel3.add(ArtB, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 380, 173, -1));
+
+        jLabel58.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
+        jLabel58.setForeground(new java.awt.Color(0, 102, 255));
+        jLabel58.setText("Guiones:");
+        jPanel3.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 330, 51, -1));
+
+        jLabel59.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
+        jLabel59.setForeground(new java.awt.Color(0, 102, 255));
+        jLabel59.setText("Niveles");
+        jPanel3.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 360, 83, -1));
+
+        jLabel60.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
+        jLabel60.setForeground(new java.awt.Color(0, 102, 255));
+        jLabel60.setText("Graficos:");
+        jPanel3.add(jLabel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 390, 51, -1));
+
+        jLabel61.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
+        jLabel61.setForeground(new java.awt.Color(0, 102, 255));
+        jLabel61.setText("Sistemas:");
+        jPanel3.add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 420, -1, -1));
+
+        jLabel62.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
+        jLabel62.setForeground(new java.awt.Color(0, 102, 255));
+        jLabel62.setText("DLC:");
+        jPanel3.add(jLabel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 450, 69, -1));
+
+        DLCC1.setForeground(new java.awt.Color(0, 102, 255));
+        DLCC1.setText("---");
+        jPanel3.add(DLCC1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 450, 173, -1));
+
+        SistemasC1.setForeground(new java.awt.Color(0, 102, 255));
+        SistemasC1.setText("---");
+        jPanel3.add(SistemasC1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 420, 173, -1));
+
+        GraficosC1.setForeground(new java.awt.Color(0, 102, 255));
+        GraficosC1.setText("---");
+        jPanel3.add(GraficosC1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 390, 173, -1));
+
+        NivelesC1.setForeground(new java.awt.Color(0, 102, 255));
+        NivelesC1.setText("---");
+        jPanel3.add(NivelesC1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 360, 173, -1));
+
+        GuionesC1.setForeground(new java.awt.Color(0, 102, 255));
+        GuionesC1.setText("---");
+        jPanel3.add(GuionesC1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 330, 173, -1));
+
+        jLabel63.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
+        jLabel63.setForeground(new java.awt.Color(51, 102, 255));
+        jLabel63.setText("Artista de Sprites: ");
+        jPanel3.add(jLabel63, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, 110, -1));
+
+        LogB.setForeground(new java.awt.Color(0, 102, 255));
+        LogB.setText("---");
+        jPanel3.add(LogB, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 400, 173, -1));
+
+        jLabel64.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
+        jLabel64.setForeground(new java.awt.Color(51, 102, 255));
+        jLabel64.setText("Programador de Lógica: ");
+        jPanel3.add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, -1, -1));
+
+        DLB.setForeground(new java.awt.Color(0, 102, 255));
+        DLB.setText("---");
+        jPanel3.add(DLB, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 420, 173, -1));
+
+        jLabel65.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
+        jLabel65.setForeground(new java.awt.Color(51, 102, 255));
+        jLabel65.setText("Desarrollador DLC:");
+        jPanel3.add(jLabel65, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 420, 110, -1));
+
+        jLabel66.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
+        jLabel66.setForeground(new java.awt.Color(0, 102, 255));
+        jLabel66.setText("Juegos con DLC:");
+        jPanel3.add(jLabel66, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 490, 97, -1));
+
+        jLabel67.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
+        jLabel67.setForeground(new java.awt.Color(0, 102, 255));
+        jLabel67.setText("Juegos sin DLC:");
+        jPanel3.add(jLabel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 520, 97, -1));
+
+        JuegosconDLC1.setForeground(new java.awt.Color(0, 102, 255));
+        JuegosconDLC1.setText("---");
+        jPanel3.add(JuegosconDLC1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 490, 173, -1));
+
+        JuegossinDLC1.setForeground(new java.awt.Color(0, 102, 255));
+        JuegossinDLC1.setText("---");
+        jPanel3.add(JuegossinDLC1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 520, 173, -1));
+
+        NiB.setForeground(new java.awt.Color(0, 102, 255));
+        NiB.setText("---");
+        jPanel3.add(NiB, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 360, 173, -1));
+
+        jLabel68.setBackground(new java.awt.Color(255, 255, 153));
+        jLabel68.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel68.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FallOut.png"))); // NOI18N
+        jPanel3.add(jLabel68, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 430, 160, 170));
+
+        jLabel69.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel69.setForeground(new java.awt.Color(0, 102, 255));
+        jLabel69.setText("Flujo de dinero:");
+        jPanel3.add(jLabel69, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 160, 240, -1));
+
+        jLabel70.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel70.setForeground(new java.awt.Color(0, 102, 255));
+        jLabel70.setText("Elementos del Drive:");
+        jPanel3.add(jLabel70, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 300, 240, -1));
+
+        jLabel71.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel71.setForeground(new java.awt.Color(0, 102, 255));
+        jLabel71.setText("Gestion de empleados");
+        jPanel3.add(jLabel71, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 240, -1));
+
+        jLabel72.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel72.setForeground(new java.awt.Color(0, 102, 255));
+        jLabel72.setText("Cantidad de desarrolladores:");
+        jPanel3.add(jLabel72, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 240, -1));
+
+        IntB.setForeground(new java.awt.Color(0, 102, 255));
+        IntB.setText("---");
+        jPanel3.add(IntB, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 440, 190, -1));
+
+        jLabel74.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
+        jLabel74.setForeground(new java.awt.Color(51, 102, 255));
+        jLabel74.setText("Integradores:");
+        jPanel3.add(jLabel74, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 440, 120, -1));
 
         jTabbedPane1.addTab("Bethesda", jPanel3);
 
@@ -307,20 +595,20 @@ public class Dashboard extends javax.swing.JFrame implements Observer {
         jLabel21.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(0, 102, 255));
         jLabel21.setText("Director:");
-        jPanel4.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 51, -1));
+        jPanel4.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 51, -1));
 
         Director.setForeground(new java.awt.Color(0, 102, 255));
         Director.setText("---");
-        jPanel4.add(Director, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, 173, -1));
+        jPanel4.add(Director, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 180, 173, -1));
 
         jLabel4.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(51, 102, 255));
-        jLabel4.setText("PM:");
-        jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 34, -1));
+        jLabel4.setText("Project Manager:");
+        jPanel4.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 100, -1));
 
         ProjectManager.setForeground(new java.awt.Color(0, 102, 255));
         ProjectManager.setText("---");
-        jPanel4.add(ProjectManager, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, 173, -1));
+        jPanel4.add(ProjectManager, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, 173, -1));
 
         jLabel19.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(51, 102, 255));
@@ -343,56 +631,56 @@ public class Dashboard extends javax.swing.JFrame implements Observer {
         jLabel18.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(51, 102, 255));
         jLabel18.setText("Proximo Corte:");
-        jPanel4.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 94, -1));
+        jPanel4.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 550, 94, -1));
 
         ProximoCorte.setForeground(new java.awt.Color(0, 102, 255));
         ProximoCorte.setText("---");
-        jPanel4.add(ProximoCorte, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 270, 173, -1));
+        jPanel4.add(ProximoCorte, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 550, 173, -1));
 
         jLabel23.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
         jLabel23.setForeground(new java.awt.Color(0, 102, 255));
         jLabel23.setText("Costos Totales:");
-        jPanel4.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 220, -1, -1));
+        jPanel4.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 250, -1, -1));
 
         Costos.setForeground(new java.awt.Color(0, 102, 255));
         Costos.setText("0");
-        jPanel4.add(Costos, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 220, 74, -1));
+        jPanel4.add(Costos, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 250, 74, -1));
 
         jLabel24.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
         jLabel24.setForeground(new java.awt.Color(0, 102, 255));
         jLabel24.setText("Ganancias Totales");
-        jPanel4.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 190, 107, -1));
+        jPanel4.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 220, 107, -1));
 
         GananciasTotales.setForeground(new java.awt.Color(0, 102, 255));
         GananciasTotales.setText("0");
-        jPanel4.add(GananciasTotales, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 190, 74, -1));
+        jPanel4.add(GananciasTotales, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 220, 74, -1));
 
         jLabel22.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(0, 102, 255));
         jLabel22.setText("Utilidad:");
-        jPanel4.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 160, 55, -1));
+        jPanel4.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 190, 55, -1));
 
         Utilidad.setForeground(new java.awt.Color(0, 102, 255));
         Utilidad.setText("0");
-        jPanel4.add(Utilidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 160, 74, -1));
+        jPanel4.add(Utilidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 190, 74, -1));
 
         jLabel26.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
         jLabel26.setForeground(new java.awt.Color(51, 102, 255));
-        jLabel26.setText("Narrativa:");
-        jPanel4.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 59, -1));
+        jLabel26.setText("Desarrollador Narrativa:");
+        jPanel4.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 130, -1));
 
-        NarrativaC.setForeground(new java.awt.Color(0, 102, 255));
-        NarrativaC.setText("---");
-        jPanel4.add(NarrativaC, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 340, 173, -1));
+        NarraC.setForeground(new java.awt.Color(0, 102, 255));
+        NarraC.setText("---");
+        jPanel4.add(NarraC, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 340, 173, -1));
 
         jLabel27.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
         jLabel27.setForeground(new java.awt.Color(51, 102, 255));
-        jLabel27.setText("Desa. Niveles");
-        jPanel4.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, 83, -1));
+        jLabel27.setText("Desarrollador de Niveles: ");
+        jPanel4.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, 130, -1));
 
-        DesNivelesC.setForeground(new java.awt.Color(0, 102, 255));
-        DesNivelesC.setText("---");
-        jPanel4.add(DesNivelesC, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 380, 173, -1));
+        ArtC.setForeground(new java.awt.Color(0, 102, 255));
+        ArtC.setText("---");
+        jPanel4.add(ArtC, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 380, 173, -1));
 
         jLabel33.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
         jLabel33.setForeground(new java.awt.Color(0, 102, 255));
@@ -441,21 +729,21 @@ public class Dashboard extends javax.swing.JFrame implements Observer {
 
         jLabel29.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
         jLabel29.setForeground(new java.awt.Color(51, 102, 255));
-        jLabel29.setText("Artistas:");
-        jPanel4.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, 51, -1));
+        jLabel29.setText("Artista de Sprites: ");
+        jPanel4.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, 110, -1));
 
-        Faltas1.setForeground(new java.awt.Color(0, 102, 255));
-        Faltas1.setText("---");
-        jPanel4.add(Faltas1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 400, 173, -1));
+        LogC.setForeground(new java.awt.Color(0, 102, 255));
+        LogC.setText("---");
+        jPanel4.add(LogC, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 400, 173, -1));
 
         jLabel30.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
         jLabel30.setForeground(new java.awt.Color(51, 102, 255));
-        jLabel30.setText("Logica:");
+        jLabel30.setText("Programador de Lógica: ");
         jPanel4.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, -1, -1));
 
-        Descuento1.setForeground(new java.awt.Color(0, 102, 255));
-        Descuento1.setText("---");
-        jPanel4.add(Descuento1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 420, 173, -1));
+        DL.setForeground(new java.awt.Color(0, 102, 255));
+        DL.setText("---");
+        jPanel4.add(DL, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 420, 173, -1));
 
         jLabel28.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
         jLabel28.setForeground(new java.awt.Color(51, 102, 255));
@@ -483,14 +771,43 @@ public class Dashboard extends javax.swing.JFrame implements Observer {
         jLabel41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Capcom_pestaña.jpg"))); // NOI18N
         jPanel4.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 570, 150));
 
-        NarrativaC1.setForeground(new java.awt.Color(0, 102, 255));
-        NarrativaC1.setText("---");
-        jPanel4.add(NarrativaC1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 360, 173, -1));
+        NiC.setForeground(new java.awt.Color(0, 102, 255));
+        NiC.setText("---");
+        jPanel4.add(NiC, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 360, 173, -1));
 
         jLabel43.setBackground(new java.awt.Color(255, 255, 153));
         jLabel43.setForeground(new java.awt.Color(0, 0, 0));
         jLabel43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Ryu_chiquitito.png"))); // NOI18N
         jPanel4.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 430, 160, 170));
+
+        jLabel44.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel44.setForeground(new java.awt.Color(0, 102, 255));
+        jLabel44.setText("Flujo de dinero:");
+        jPanel4.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 160, 240, -1));
+
+        jLabel45.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel45.setForeground(new java.awt.Color(0, 102, 255));
+        jLabel45.setText("Elementos del Drive:");
+        jPanel4.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 300, 240, -1));
+
+        jLabel46.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel46.setForeground(new java.awt.Color(0, 102, 255));
+        jLabel46.setText("Gestion de empleados");
+        jPanel4.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 240, -1));
+
+        jLabel47.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 14)); // NOI18N
+        jLabel47.setForeground(new java.awt.Color(0, 102, 255));
+        jLabel47.setText("Cantidad de desarrolladores:");
+        jPanel4.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 240, -1));
+
+        IntC.setForeground(new java.awt.Color(0, 102, 255));
+        IntC.setText("---");
+        jPanel4.add(IntC, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 440, 173, -1));
+
+        jLabel73.setFont(new java.awt.Font("Gill Sans Ultra Bold Condensed", 0, 11)); // NOI18N
+        jLabel73.setForeground(new java.awt.Color(51, 102, 255));
+        jLabel73.setText("Integradores:");
+        jPanel4.add(jLabel73, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 440, 110, -1));
 
         jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 570, 600));
 
@@ -539,11 +856,54 @@ public class Dashboard extends javax.swing.JFrame implements Observer {
             
         }
         
-        
-        
-        
-       
+        this.ModificarValoresTrabajadoresC((int)this.CantidadNarrativa.getValue(), (int)this.CantidadNiveles.getValue(), (int)this.CantidadArtista.getValue(), (int)this.CantidadLogica.getValue(), (int)this.CantidadDLC.getValue(), (int)this.CantidadIntegradores.getValue());
+        this.ModificarValoresTrabajadoresB((int)this.CantidadNarrativa1.getValue(), (int)this.CantidadNiveles1.getValue(), (int)this.CantidadArtista1.getValue(), (int)this.CantidadLogica1.getValue(), (int)this.CantidadDLC1.getValue(), (int)this.CantidadIntegradores1.getValue());
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+            
+        try {
+            FileWriter archivoCapcom = new FileWriter("C:/Users/Luisp/OneDrive/Desktop/ArchivoTXTCapcom.txt");
+            PrintWriter escritor = new PrintWriter(archivoCapcom);
+        escritor.println((int)this.DuracionDia.getValue());
+        escritor.println((int)this.CantidadNarrativa.getValue());
+        escritor.println((int)this.CantidadNiveles.getValue());
+        escritor.println((int)this.CantidadArtista.getValue());
+        escritor.println((int)this.CantidadLogica.getValue());
+        escritor.println((int)this.CantidadDLC.getValue());
+        escritor.println((int)this.CantidadIntegradores.getValue());
+        escritor.println((int)this.DiasLanzamiento.getValue());
+        
+        archivoCapcom.close();
+        } catch (IOException ex) {
+            Logger.getLogger(Dashboard.class.getName()).log(Level.SEVERE, null, ex);
+        }
+//        archivoCapcom.write("Esto es una prueba");
+//        archivoCapcom.close();
+        
+
+        
+        FileWriter archivoBethesda;
+        try {
+            archivoBethesda = new FileWriter("C:/Users/Luisp/OneDrive/Desktop/ArchivoTXTBethesda.txt");
+            PrintWriter escritor2 = new PrintWriter(archivoBethesda);
+        escritor2.println((int)this.DuracionDia.getValue());
+        escritor2.println((int)this.CantidadNarrativa1.getValue());
+        escritor2.println((int)this.CantidadNiveles1.getValue());
+        escritor2.println((int)this.CantidadArtista1.getValue());
+        escritor2.println((int)this.CantidadLogica1.getValue());
+        escritor2.println((int)this.CantidadDLC1.getValue());
+        escritor2.println((int)this.CantidadIntegradores1.getValue());
+        escritor2.println((int)this.DiasLanzamiento.getValue());
+        
+        archivoBethesda.close();
+        } catch (IOException ex) {
+            Logger.getLogger(Dashboard.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
+        System.exit(0);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -576,6 +936,7 @@ public class Dashboard extends javax.swing.JFrame implements Observer {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Dashboard().setVisible(true);
+                System.out.println("Hola");
                 
             }
         });
@@ -584,6 +945,8 @@ public class Dashboard extends javax.swing.JFrame implements Observer {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel ArtB;
+    private javax.swing.JLabel ArtC;
     private javax.swing.JSpinner CantidadArtista;
     private javax.swing.JSpinner CantidadArtista1;
     private javax.swing.JSpinner CantidadDLC;
@@ -597,31 +960,52 @@ public class Dashboard extends javax.swing.JFrame implements Observer {
     private javax.swing.JSpinner CantidadNiveles;
     private javax.swing.JSpinner CantidadNiveles1;
     private javax.swing.JLabel Costos;
+    private javax.swing.JLabel Costos1;
+    private javax.swing.JLabel DL;
+    private javax.swing.JLabel DLB;
     private javax.swing.JLabel DLCC;
-    private javax.swing.JLabel DesNivelesC;
+    private javax.swing.JLabel DLCC1;
     private javax.swing.JLabel Descuento;
-    private javax.swing.JLabel Descuento1;
+    private javax.swing.JLabel Descuento2;
     private javax.swing.JLabel Dia;
     private javax.swing.JSpinner DiasLanzamiento;
     private javax.swing.JLabel Director;
+    private javax.swing.JLabel Director1;
     private javax.swing.JSpinner DuracionDia;
     private javax.swing.JLabel EDispo;
     private javax.swing.JLabel EDispo1;
     private javax.swing.JLabel Faltas;
-    private javax.swing.JLabel Faltas1;
+    private javax.swing.JLabel Faltas2;
     private javax.swing.JLabel GananciasTotales;
+    private javax.swing.JLabel GananciasTotales1;
     private javax.swing.JLabel GraficosC;
+    private javax.swing.JLabel GraficosC1;
     private javax.swing.JLabel GuionesC;
+    private javax.swing.JLabel GuionesC1;
+    private javax.swing.JLabel IntB;
+    private javax.swing.JLabel IntC;
     private javax.swing.JLabel JuegosconDLC;
+    private javax.swing.JLabel JuegosconDLC1;
     private javax.swing.JLabel JuegossinDLC;
-    private javax.swing.JLabel NarrativaC;
-    private javax.swing.JLabel NarrativaC1;
+    private javax.swing.JLabel JuegossinDLC1;
+    private javax.swing.JLabel LogB;
+    private javax.swing.JLabel LogC;
+    private javax.swing.JLabel NarraB;
+    private javax.swing.JLabel NarraC;
+    private javax.swing.JLabel NiB;
+    private javax.swing.JLabel NiC;
     private javax.swing.JLabel NivelesC;
+    private javax.swing.JLabel NivelesC1;
     private javax.swing.JLabel ProjectManager;
+    private javax.swing.JLabel ProjectManager1;
     private javax.swing.JLabel ProximoCorte;
+    private javax.swing.JLabel ProximoCorte1;
     private javax.swing.JLabel SistemasC;
+    private javax.swing.JLabel SistemasC1;
     private javax.swing.JLabel Utilidad;
+    private javax.swing.JLabel Utilidad1;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -660,9 +1044,40 @@ public class Dashboard extends javax.swing.JFrame implements Observer {
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel50;
+    private javax.swing.JLabel jLabel51;
+    private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
+    private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel56;
+    private javax.swing.JLabel jLabel57;
+    private javax.swing.JLabel jLabel58;
+    private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel60;
+    private javax.swing.JLabel jLabel61;
+    private javax.swing.JLabel jLabel62;
+    private javax.swing.JLabel jLabel63;
+    private javax.swing.JLabel jLabel64;
+    private javax.swing.JLabel jLabel65;
+    private javax.swing.JLabel jLabel66;
+    private javax.swing.JLabel jLabel67;
+    private javax.swing.JLabel jLabel68;
+    private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel70;
+    private javax.swing.JLabel jLabel71;
+    private javax.swing.JLabel jLabel72;
+    private javax.swing.JLabel jLabel73;
+    private javax.swing.JLabel jLabel74;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
@@ -672,6 +1087,26 @@ public class Dashboard extends javax.swing.JFrame implements Observer {
     private javax.swing.JTabbedPane jTabbedPane1;
     // End of variables declaration//GEN-END:variables
 
+    public void ModificarValoresTrabajadoresC(int N, int Ni, int A, int L, int D, int I ){
+            this.NarraC.setText(Integer.toString(N));
+            this.NiC.setText(Integer.toString(Ni));
+            this.ArtC.setText(Integer.toString(A));
+            this.LogC.setText(Integer.toString(L));
+            this.DL.setText(Integer.toString(D));
+            this.IntC.setText(Integer.toString(I));
+        }
+    
+    public void ModificarValoresTrabajadoresB(int N, int Ni, int A, int L, int D, int I ){
+            this.NarraB.setText(Integer.toString(N));
+            this.NiB.setText(Integer.toString(Ni));
+            this.ArtB.setText(Integer.toString(A));
+            this.LogB.setText(Integer.toString(L));
+            this.DLB.setText(Integer.toString(D));
+            this.IntB.setText(Integer.toString(I));
+        }
+    
+    
+    
     @Override
     public void update(Observable o, Object arg) {
         try{
@@ -683,6 +1118,7 @@ public class Dashboard extends javax.swing.JFrame implements Observer {
     catch (Exception e){
         try {
         ProjectManager c = (ProjectManager) o;
+        if(c.Identificador=="Cap"){
         if(String.valueOf(arg)=="Cambiando Contador" || String.valueOf(arg)=="Ve Stream" || String.valueOf(arg)=="Tareas Administrativas"){
         this.ProjectManager.setText(String.valueOf(arg));
         }
@@ -693,10 +1129,25 @@ public class Dashboard extends javax.swing.JFrame implements Observer {
         else{
         this.ProximoCorte.setText(String.valueOf(arg));
         }
+        
         }
+        else{
+          if(String.valueOf(arg)=="Cambiando Contador" || String.valueOf(arg)=="Ve Stream" || String.valueOf(arg)=="Tareas Administrativas"){
+        this.ProjectManager1.setText(String.valueOf(arg));
+        }
+        else if(String.valueOf(arg)=="Labores Administrativas" ||String.valueOf(arg)=="Enviar Videojuegos"){
+        this.Director1.setText(String.valueOf(arg));
+        }
+        
+        else{
+        this.ProximoCorte1.setText(String.valueOf(arg));
+        }        
+                
+                }}
         catch(Exception d){
             try {
             Director c = (Director) o;
+            if(c.BET==null){
             String arg1 = String.valueOf(arg);
 
             if(c.faltas==Integer.parseInt(arg1)){
@@ -721,7 +1172,28 @@ public class Dashboard extends javax.swing.JFrame implements Observer {
             else{
             this.Director.setText(String.valueOf("Enviar Videojuegos"));
             }
-            }*/
+            }*/}
+            else{
+            String arg1 = String.valueOf(arg);
+
+            if(c.faltas==Integer.parseInt(arg1)){
+            this.Faltas2.setText(String.valueOf(arg));
+            }
+            else if(c.PMDescuento==Integer.parseInt(arg1)){
+            this.Descuento2.setText(String.valueOf(arg));
+            }
+            else if(c.GananciasTotales==Integer.parseInt(arg1)){
+            this.GananciasTotales1.setText(String.valueOf(arg));
+            }
+            else if(c.Costos==Integer.parseInt(arg1)){
+            this.Costos1.setText(String.valueOf(arg));
+            }
+            else if(c.Utilidad==Integer.parseInt(arg1)){
+            this.Utilidad1.setText(String.valueOf(arg));
+            }
+            
+            }
+            
             }catch(Exception a){
                 try {
                 Drive c = (Drive) o;
@@ -749,6 +1221,34 @@ public class Dashboard extends javax.swing.JFrame implements Observer {
                 else if(c.posicionJuegossinDLC==Integer.parseInt(arg1)){
                     this.JuegossinDLC.setText(String.valueOf(arg));
                 }
+                }
+                else{
+                    System.out.println("Llego");
+                String arg1 = String.valueOf(arg);
+                if(c.posicionNarrativa==Integer.parseInt(arg1)){
+                this.GuionesC1.setText(String.valueOf(arg));
+                }
+                else if(c.posicionNiveles==Integer.parseInt(arg1)){
+                this.NivelesC1.setText(String.valueOf(arg));
+                }
+                else if(c.posicionArtista==Integer.parseInt(arg1)){
+                this.GraficosC1.setText(String.valueOf(arg));
+                }
+                else if(c.posicionLogica==Integer.parseInt(arg1)){
+                this.SistemasC1.setText(String.valueOf(arg));
+                }
+                else if(c.posicionDLC==Integer.parseInt(arg1)){
+                this.DLCC1.setText(String.valueOf(arg));
+                }
+                else if(c.posicionJuegosconDLC==Integer.parseInt(arg1)){
+                this.JuegosconDLC1.setText(String.valueOf(arg));
+                }
+                else if(c.posicionJuegossinDLC==Integer.parseInt(arg1)){
+                    this.JuegossinDLC1.setText(String.valueOf(arg));
+                }
+                    
+                
+                
                 }
             
             }catch(Exception q){

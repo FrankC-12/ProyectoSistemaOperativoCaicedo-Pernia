@@ -140,7 +140,7 @@ public class EmpresaCapcom {
      }
          
     public void CrearProjectManajer(Observer Interfaz){
-    P1 = new ProjectManager(DuracionDia,DiasLanzamiento);
+    P1 = new ProjectManager(DuracionDia,DiasLanzamiento,"Cap");
     P1.addObserver(Interfaz);
     Thread HiloProjectManager = new Thread(P1);
     HiloProjectManager.start();

@@ -53,6 +53,7 @@ public class ProyectoSO_CaicedoPernia2 {
         Empresa1.CrearProjectManajer(Interfaz);
         Empresa1.InicializarHilos(Interfaz);
         Empresa1.ReasignarCantidades();
+        Interfaz.ModificarValoresTrabajadoresC(Integer.parseInt(Capcom[1]),Integer.parseInt(Capcom[2]),Integer.parseInt(Capcom[3]),Integer.parseInt(Capcom[4]),Integer.parseInt(Capcom[5]),Integer.parseInt(Capcom[6]));
         
         
         //Se lee el TXT de Bethesda
@@ -60,7 +61,7 @@ public class ProyectoSO_CaicedoPernia2 {
         if (archivoLecturaB.ready()){
         lector2 = new BufferedReader(archivoLecturaB);
         String cadena1;
-        String[] Bethesda = new String[7];
+        String[] Bethesda = new String[8];
         int i1 = 0;
         while((cadena1 = lector2.readLine())!=null){
         Bethesda[i1] = cadena1;
@@ -68,10 +69,11 @@ public class ProyectoSO_CaicedoPernia2 {
         }
         
         //Se crea el objeto Empresa Bethesda
-        Empresa2 = new EmpresaBethesda(Integer.parseInt(Bethesda[0]),Integer.parseInt(Bethesda[1]),Integer.parseInt(Bethesda[2]),Integer.parseInt(Bethesda[3]),Integer.parseInt(Bethesda[4]),Integer.parseInt(Bethesda[5]),Integer.parseInt(Bethesda[6]));
-        Empresa2.InicializarHilos();
+        Empresa2 = new EmpresaBethesda(Integer.parseInt(Bethesda[0]),Integer.parseInt(Bethesda[1]),Integer.parseInt(Bethesda[2]),Integer.parseInt(Bethesda[3]),Integer.parseInt(Bethesda[4]),Integer.parseInt(Bethesda[5]),Integer.parseInt(Bethesda[6]),Integer.parseInt(Bethesda[7]));
+        Empresa2.CrearProjectManajer(Interfaz);
+        Empresa2.InicializarHilos(Interfaz);
         Empresa2.ReasignarCantidades();
-        
+        Interfaz.ModificarValoresTrabajadoresB(Integer.parseInt(Bethesda[1]),Integer.parseInt(Bethesda[2]),Integer.parseInt(Bethesda[3]),Integer.parseInt(Bethesda[4]),Integer.parseInt(Bethesda[5]),Integer.parseInt(Bethesda[6]));
 
         }
         }
